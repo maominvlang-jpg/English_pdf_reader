@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<!-- saved from url=(0132)blob:https://0j709qxmljs1ddxzenr980ddghb2tfzhol969830owzdhm3859-h881409884.scf.usercontent.goog/3cddc1a5-df41-456e-a117-42e2acdbf107 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxYmYyOWUyNjI1Yzk1NzI0YWQ3OWJhNGE0ZjcxNDBjNDA0NGRlNjIiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNjI4NjcxNjg3MzM4NDc0NzM3MSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2FjNmJhMDQ5OWY3NTllZjBfZWJvb2tfdmlld2VyLmh0bWwtNDE5In0sImV4cCI6MTc3NDI1NDI1NSwiaWF0IjoxNzc0MjUwNjU1LCJhbGciOiJSUzI1NiJ9.tc5T2LNUdkw8zCLZbgXpXvkNQoZngiDYg_uZhetiaYuNWv5NC8tjTQ540yotOYKUFmCxatrCEr-d6i74qQRVM4pfHpR1w0GGT7zdJn_Y7HnzXEDJ9__W-QufKeZ86UEJayD5T4OZgZFwlxY4ftzTWoSavN8INivhqDX8lpW_QML4rBuAN6h1vo_R2dHAlV41i9vIA9m-4aLb4vYkV603x9PWTyFV9R8z3XUbFLvx-h2fSYtqe00S4EBrm--yMztni3nnAChP4HApXPMHWw438wg5lNMKHyiT30VNbZVb-hSLMok_fY-aCglMBZ9Fi6LEQxHxN9pY-3buRK7n9MnxoA","c_ac6ba0499f759ef0_ebook_viewer.html-419")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 电子书阅读器 (点击播放、翻译和文本识别)</title>
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <!-- 引入 PDF.js 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs" type="module" crossorigin="anonymous"></script>
+    <!-- 引入 Firebase 相关的 CDN -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // 设置 Firebase 日志级别为 Debug，以增强调试能力
+        setLogLevel('debug');
+
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let app; 
+        let db, auth;
+        let userId = null;
+
+        if (Object.keys(firebaseConfig).length > 0) {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            
+            // 尝试设置持久性
+            setPersistence(auth, browserLocalPersistence).catch(e => console.error("Firebase persistence setup failed:", e));
+
+            // **【最终修复】添加指数退避重试机制，以缓解 network-request-failed 错误**
+            (async () => {
+                const MAX_AUTH_RETRIES = 3;
+                for (let retry = 0; retry < MAX_AUTH_RETRIES; retry++) {
+                    try {
+                        if (initialAuthToken) {
+                            await signInWithCustomToken(auth, initialAuthToken);
+                            console.log("Firebase Auth: Custom token sign-in successful.");
+                        } else {
+                            await signInAnonymously(auth);
+                            console.log("Firebase Auth: Anonymous sign-in successful.");
+                        }
+                        // 登录成功，退出循环
+                        break; 
+                    } catch (error) {
+                        console.error(`Firebase Auth 认证失败 (重试 ${retry + 1}/${MAX_AUTH_RETRIES}): ${error.code} - ${error.message}`);
+                        if (retry === MAX_AUTH_RETRIES - 1) {
+                            console.error("Firebase Auth: 所有重试均失败，应用将以未认证状态运行。");
+                            // 保持未认证状态，让 onAuthStateChanged 处理
+                        } else {
+                            // 使用指数退避等待
+                            const delay = Math.pow(2, retry) * 1000 + Math.random() * 500;
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                        }
+                    }
+                }
+            })();
+
+            // 监听器现在只负责更新状态
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    userId = user.uid;
+                    console.log("Firebase Auth: State changed, User ID set:", userId);
+                } else {
+                    userId = null;
+                    console.log("Firebase Auth: User signed out or state resolved to null.");
+                }
+            });
+        }
+    </script>
+    <style>
+        /* 引入 Inter 字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        /* 隐藏文件输入框，使用自定义按钮触发 */
+        #pdf-file-input {
+            display: none;
+        }
+
+        /* 电子书容器样式 - 现在只包含 Canvas 和 Overlay */
+        #book-canvas-wrapper {
+            /* 移除背景和阴影，让父容器处理 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        /* 确保 Canvas 响应式，但保持其父容器的尺寸由 PDF 页面决定 */
+        #pdf-canvas {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Canvas 和 Overlay 的 Wrapper */
+        #canvas-wrapper {
+            position: relative;
+            /* 确保 Canvas Wrapper 的宽度适应 Canvas 自身 */
+            display: inline-block; 
+        }
+
+        /* 用于捕获点击事件的透明覆盖层 */
+        #click-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 默认为不可见，运行 OCR 后才显示 */
+            pointer-events: none; 
+            z-index: 10;
+        }
+
+        /* 单词高亮样式 */
+        .highlighted-word {
+            color: #ef4444; /* Tailwind red-500 */
+            font-weight: 700;
+            background-color: #fee2e2; /* Tailwind red-100 */
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.1s ease-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.relative{position:relative}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mr-1{margin-right:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-10{height:2.5rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.cursor-text{cursor:text}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-6{gap:1.5rem}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-blue-300{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-red-400{--tw-border-opacity:1;border-color:rgb(248 113 113 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-2{padding-bottom:0.5rem}.pt-2{padding-top:0.5rem}.text-center{text-align:center}.font-sans{font-family:Inter, sans-serif}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-25{opacity:0.25}.opacity-75{opacity:0.75}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:0.5}@media (min-width: 640px){.sm\:inline{display:inline}}@media (min-width: 1024px){.lg\:w-2\/5{width:40%}.lg\:w-3\/5{width:60%}.lg\:flex-row{flex-direction:row}}@media (min-width: 1280px){.xl\:w-5\/12{width:41.666667%}.xl\:w-7\/12{width:58.333333%}.xl\:flex-row{flex-direction:row}.xl\:space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.xl\:space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}}</style></head>
+<body class="bg-gray-50 flex flex-col items-center p-4 min-h-screen font-sans">
+
+    <div class="w-full max-w-7xl space-y-6">
+        <!-- 头部/标题 -->
+        <h1 class="text-3xl font-bold text-gray-800 text-center mt-4">
+            📚 PDF 电子书阅读器 (点击播放、翻译和文本识别)
+        </h1>
+        <p class="text-center text-sm text-gray-500">
+            PDF 页面加载后将**自动**运行 OCR 识别文本并翻译。识别完成后，您可以点击页面上的英文文本块来播放音频、查看翻译，并在右侧查看提取的文本。识别出的文本块会用
+            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-bold">1</span>
+            等序号标记。
+        </p>
+
+        <!-- 文件上传和控制区 -->
+        <div id="controls" class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0 xl:space-x-4">
+            
+            <!-- 上传按钮 -->
+            <label for="pdf-file-input" class="cursor-pointer flex-shrink-0">
+                <div class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                    选择 PDF 文件 ( &lt; 500MB)
+                </div>
+            </label>
+            <input type="file" id="pdf-file-input" accept="application/pdf" onchange="handleFileUpload(event)">
+
+            <!-- 页面信息 -->
+            <div id="page-info" class="text-lg font-medium text-gray-700 hidden flex-shrink-0">
+                <span id="current-page-display">1</span> / <span id="total-pages-display">0</span>
+            </div>
+
+            <!-- 导航和 OCR 按钮 -->
+            <div class="flex space-x-3 flex-shrink-0">
+                <button id="ocr-btn" onclick="runOCR(false)" class="p-3 bg-green-500 hover:bg-green-600 text-white rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition duration-150 font-semibold flex items-center" disabled="">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-1"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path><path d="M7 10h10"></path></svg>
+                    重新识别/翻译文本 (OCR)
+                </button>
+                <button id="prev-btn" onclick="goPrevPage()" class="p-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition duration-150" disabled="">
+                    <!-- Chevron Left Icon (Lucide) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m15 18-6-6 6-6"></path></svg>
+                </button>
+                <button id="next-btn" onclick="goNextPage()" class="p-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition duration-150" disabled="">
+                    <!-- Chevron Right Icon (Lucide) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- 主内容区域: PDF Viewer (左) + Extracted Text Panel (右) -->
+        <div id="main-content-area" class="flex flex-col lg:flex-row gap-6">
+
+            <!-- 左侧区域：PDF Viewer 和 TTS Status -->
+            <div class="lg:w-3/5 xl:w-7/12 flex flex-col space-y-4">
+                 <!-- 电子书显示区域 -->
+                <div id="book-canvas-wrapper" class="w-full bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden p-4">
+                    <!-- 加载指示器/初始提示 -->
+                    <div id="loading-spinner" class="hidden flex flex-col items-center justify-center p-8 text-gray-500">
+                        <svg class="animate-spin h-10 w-10 text-blue-500 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <p>正在加载和渲染 PDF，请稍候...</p>
+                    </div>
+                    
+                    <!-- 初始提示 -->
+                    <div id="initial-message" class="flex flex-col items-center justify-center p-8 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><path d="M4 19.5V15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"></path><path d="M12 19.5V15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2Z"></path><path d="M10 2v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V2"></path></svg>
+                        <p class="text-lg">点击上方的按钮选择 PDF 文件开始阅读。</p>
+                    </div>
+
+                    <!-- PDF/点击交互区域 -->
+                    <div id="canvas-wrapper" class="hidden">
+                        <canvas id="pdf-canvas" class="block rounded-xl"></canvas>
+                        <!-- 透明覆盖层，用于捕获点击和显示标记 -->
+                        <div id="click-overlay" class="cursor-text hidden" onclick="handleCanvasClick(event)"></div>
+                    </div>
+                    
+                    <!-- 错误提示框 -->
+                    <div id="error-box" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">错误:</strong>
+                        <span id="error-message" class="block sm:inline"></span>
+                    </div>
+                </div>
+
+                <!-- TTS 状态信息 (包含翻译显示) -->
+                <div id="tts-status-box" class="p-4 bg-blue-100 border border-blue-400 text-blue-700 rounded-lg hidden shadow-md">
+                    <p class="font-semibold text-gray-700 mb-1">播放状态 (Playback Status):</p>
+                    <p id="tts-status-message" class="flex items-center text-sm font-medium mb-2">
+                        <!-- TTS 状态信息将显示在这里 -->
+                    </p>
+                    
+                    <!-- 英文原句显示区 (提供上下文) -->
+                    <div id="original-text-display-wrapper" class="pt-2 mt-2 border-t border-blue-300">
+                        <p class="font-semibold text-gray-700 mb-1">英文原句 (Original Text):</p>
+                        <p id="original-text-display" class="text-gray-900 text-base font-bold"></p>
+                    </div>
+
+                    <!-- 播放/同步区域 - 包含同步英文和中文翻译，用边框和间距与上文隔离 -->
+                    <div id="playback-and-translation-area" class="pt-2 mt-2 border-t border-blue-300">
+
+                        <!-- 单词级同步显示区 -->
+                        <div id="word-sync-wrapper" class="hidden">
+                            <p class="font-semibold text-gray-700 mb-1">同步播放 (Word Sync):</p>
+                            <div id="synced-word-display" class="text-gray-900 text-base font-bold flex flex-wrap leading-relaxed">
+                                <!-- Spans for individual words will go here -->
+                            </div>
+                        </div>
+
+                        <!-- 翻译显示区 (现在紧跟在同步词汇下方，mt-3 提供与同步词汇的间距) -->
+                        <div id="translation-display-wrapper" class="mt-3">
+                            <p class="font-semibold text-gray-700 mb-1">中文翻译 (Translation):</p>
+                            <p id="translated-text" class="text-gray-900 text-base"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧区域：OCR 提取文本面板 (新增) -->
+            <div id="ocr-text-panel-container" class="lg:w-2/5 xl:w-5/12">
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full flex flex-col">
+                    <h2 class="text-xl font-bold text-gray-800 mb-3 border-b pb-2">📖 提取文本 (OCR Result)</h2>
+                    <div id="ocr-text-panel" class="flex-grow overflow-y-auto text-gray-700 text-sm space-y-3">
+                        <p class="text-gray-500 italic" id="ocr-initial-message">加载 PDF 并运行 OCR 后，识别的文本将显示在这里。</p>
+                        <!-- 识别出的文本将插入到这里 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // 设置 PDF.js Worker 路径
+        const pdfjsLib = window.pdfjsLib;
+        if (pdfjsLib) {
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.mjs';
+        } else {
+            console.error("PDF.js library failed to load.");
+        }
+
+        // --- 全局状态和常量 ---
+        let pdfDoc = null; 
+        let currentPage = 1; 
+        let currentAudio = null; 
+        let currentSyncInterval = null; 
+        let ocrData = []; // 存储 { text, bbox, translation }
+        let currentSpeakingElement = null; 
+        let currentWordIndex = -1; 
+
+        const MAX_FILE_SIZE_MB = 500;
+        const MAX_RETRIES = 5;
+        const OCR_MODEL = 'gemini-2.5-flash-preview-09-2025';
+        const TTS_MODEL = 'gemini-2.5-flash-preview-tts';
+        const TTS_VOICE = 'Kore'; 
+        const BBOX_NORM_SIZE = 1000; 
+
+        // --- DOM 元素 ---
+        const canvasWrapper = document.getElementById('canvas-wrapper');
+        const canvas = document.getElementById('pdf-canvas');
+        const ctx = canvas.getContext('2d');
+        const clickOverlay = document.getElementById('click-overlay');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const ocrBtn = document.getElementById('ocr-btn'); 
+        const currentPageDisplay = document.getElementById('current-page-display');
+        const totalPagesDisplay = document.getElementById('total-pages-display');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const initialMessage = document.getElementById('initial-message');
+        const pageInfo = document.getElementById('page-info');
+        const errorBox = document.getElementById('error-box');
+        const errorMessage = document.getElementById('error-message');
+        
+        // 新增 DOM 元素
+        const ocrTextPanel = document.getElementById('ocr-text-panel');
+        const ocrInitialMessage = document.getElementById('ocr-initial-message');
+        
+        // TTS/翻译/同步状态元素
+        const ttsStatusBox = document.getElementById('tts-status-box'); 
+        const ttsStatusMessage = document.getElementById('tts-status-message');
+        const originalTextDisplay = document.getElementById('original-text-display');
+        const translatedTextElement = document.getElementById('translated-text');
+        const wordSyncWrapper = document.getElementById('word-sync-wrapper'); 
+        const syncedWordDisplay = document.getElementById('synced-word-display'); 
+
+
+        // --- 核心工具函数 (PCM to WAV) ---
+        
+        /** 将 Base64 字符串转换为 ArrayBuffer */
+        function base64ToArrayBuffer(base64) {
+            const binaryString = atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        /** 写入 WAV 文件头的辅助函数 */
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        /** 将 16位 PCM 音频数据转换为 WAV Blob */
+        function pcmToWav(pcm16, sampleRate = 24000) {
+            const numChannels = 1;
+            const bytesPerSample = 2; // 16-bit PCM
+            const blockAlign = numChannels * bytesPerSample;
+            const byteRate = sampleRate * blockAlign;
+
+            const buffer = new ArrayBuffer(44 + pcm16.length * bytesPerSample);
+            const view = new DataView(buffer);
+
+            // RIFF chunk
+            writeString(view, 0, 'RIFF');
+            view.setUint32(4, 36 + pcm16.length * bytesPerSample, true);
+            writeString(view, 8, 'WAVE');
+            
+            // FMT chunk
+            writeString(view, 12, 'fmt ');
+            view.setUint32(16, 16, true); 
+            view.setUint16(20, 1, true); 
+            view.setUint16(22, numChannels, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, byteRate, true);
+            view.setUint16(32, blockAlign, true);
+            view.setUint16(34, 16, true); 
+
+            // DATA chunk
+            writeString(view, 36, 'data');
+            view.setUint32(40, pcm16.length * bytesPerSample, true);
+
+            // Write PCM data
+            let offset = 44;
+            for (let i = 0; i < pcm16.length; i++) {
+                view.setInt16(offset, pcm16[i], true);
+                offset += bytesPerSample;
+            }
+
+            return new Blob([buffer], { type: 'audio/wav' });
+        }
+        
+        // --- 通用 UI/流程 函数 ---
+        
+        function showError(message) {
+            loadingSpinner.classList.add('hidden');
+            initialMessage.classList.add('hidden');
+            canvasWrapper.classList.add('hidden');
+            errorBox.classList.remove('hidden');
+            errorMessage.textContent = message;
+            pageInfo.classList.add('hidden');
+            ocrData = [];
+            clickOverlay.classList.add('hidden');
+            clickOverlay.style.pointerEvents = 'none';
+            // 清空文本面板和标记
+            ocrTextPanel.innerHTML = '<p class="text-red-500">OCR 失败或出现错误，无法显示文本。</p>';
+            clickOverlay.querySelectorAll('.ocr-marker').forEach(m => m.remove());
+        }
+
+        function showLoading() {
+            canvasWrapper.classList.add('hidden');
+            initialMessage.classList.add('hidden');
+            errorBox.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            pageInfo.classList.add('hidden');
+            
+            prevBtn.disabled = true;
+            nextBtn.disabled = true;
+            ocrBtn.disabled = true;
+            ttsStatusBox.classList.add('hidden');
+            
+            ocrData = [];
+            clickOverlay.classList.add('hidden');
+            clickOverlay.style.pointerEvents = 'none';
+            
+            // 清空文本面板和标记
+            ocrTextPanel.innerHTML = `
+                <div class="flex items-center text-blue-500">
+                    <svg class="animate-spin h-5 w-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>正在渲染 PDF 和准备 OCR...</span>
+                </div>
+            `;
+            clickOverlay.querySelectorAll('.ocr-marker').forEach(m => m.remove());
+
+            stopPlaybackAndCleanup();
+        }
+
+        function updateNavigationButtons() {
+            if (!pdfDoc) {
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+                ocrBtn.disabled = true;
+                return;
+            }
+            prevBtn.disabled = currentPage <= 1;
+            nextBtn.disabled = currentPage >= pdfDoc.numPages;
+            ocrBtn.disabled = false;
+
+            currentPageDisplay.textContent = currentPage;
+            totalPagesDisplay.textContent = pdfDoc.numPages;
+            pageInfo.classList.remove('hidden');
+        }
+
+        async function renderPage(pageNum) {
+            if (!pdfDoc) return;
+            showLoading();
+
+            try {
+                const page = await pdfDoc.getPage(pageNum);
+                
+                // 计算缩放比例以适应容器
+                const containerWidth = document.getElementById('book-canvas-wrapper').clientWidth - 40; 
+                const viewport = page.getViewport({ scale: 1 });
+                const scale = containerWidth / viewport.width;
+                const scaledViewport = page.getViewport({ scale: scale });
+
+                canvas.height = scaledViewport.height;
+                canvas.width = scaledViewport.width;
+                
+                canvasWrapper.style.width = `${scaledViewport.width}px`;
+                canvasWrapper.style.height = `${scaledViewport.height}px`;
+
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: scaledViewport
+                };
+
+                await page.render(renderContext).promise;
+
+                currentPage = pageNum;
+                loadingSpinner.classList.add('hidden');
+                canvasWrapper.classList.remove('hidden'); 
+                updateNavigationButtons();
+                
+                // 清理旧的 OCR 状态
+                ocrData = [];
+                clickOverlay.style.width = `${scaledViewport.width}px`;
+                clickOverlay.style.height = `${scaledViewport.height}px`;
+                clickOverlay.classList.add('hidden');
+                clickOverlay.style.pointerEvents = 'none';
+                clickOverlay.querySelectorAll('.ocr-marker').forEach(m => m.remove()); // 清除标记
+                
+                stopPlaybackAndCleanup(); // 切换页面时停止所有播放和高亮
+                
+                // 渲染完成后自动运行 OCR
+                if (pdfDoc) {
+                    Promise.resolve().then(() => window.runOCR(true)); // 传入 true 表示自动运行
+                }
+
+            } catch (error) {
+                console.error("渲染 PDF 页面失败:", error);
+                showError("渲染 PDF 页面失败: " + error.message);
+            }
+        }
+
+        window.goToPage = function(pageNum) {
+            if (!pdfDoc || pageNum < 1 || pageNum > pdfDoc.numPages || pageNum === currentPage) {
+                return;
+            }
+            renderPage(pageNum);
+        };
+        
+        window.goPrevPage = function() {
+            window.goToPage(currentPage - 1);
+        }
+        
+        window.goNextPage = function() {
+            window.goToPage(currentPage + 1);
+        }
+
+
+        window.handleFileUpload = async function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const fileSizeMB = file.size / (1024 * 1024);
+            if (fileSizeMB > MAX_FILE_SIZE_MB) {
+                event.target.value = '';
+                showError(`文件大小 (${fileSizeMB.toFixed(2)} MB) 超过了 ${MAX_FILE_SIZE_MB} MB 的限制。`);
+                return;
+            }
+
+            showLoading();
+            
+            const fileReader = new FileReader();
+            fileReader.onload = async function() {
+                try {
+                    const typedarray = new Uint8Array(this.result);
+                    pdfDoc = await pdfjsLib.getDocument({ data: typedarray }).promise;
+                    currentPage = 1;
+                    totalPagesDisplay.textContent = pdfDoc.numPages;
+                    // renderPage 调用后将自动触发 runOCR
+                    await renderPage(currentPage); 
+                } catch (error) {
+                    console.error("加载 PDF 文件失败:", error);
+                    showError("无法加载 PDF 文件。错误: " + error.message);
+                }
+            };
+            fileReader.onerror = function(error) {
+                console.error("文件读取失败:", error);
+                showError("文件读取失败。");
+            };
+            fileReader.readAsArrayBuffer(file);
+        };
+
+        /**
+         * 停止所有播放和清理所有高亮/计时器
+         */
+        function stopPlaybackAndCleanup() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+            }
+            if (currentSyncInterval) {
+                clearInterval(currentSyncInterval);
+                currentSyncInterval = null;
+            }
+            // 移除 Canvas 上的高亮框 (currentSpeakingElement)
+            if (currentSpeakingElement) {
+                currentSpeakingElement.remove();
+                currentSpeakingElement = null;
+            }
+            // 清除单词高亮
+            currentWordIndex = -1;
+            syncedWordDisplay.innerHTML = '';
+            wordSyncWrapper.classList.add('hidden');
+
+            // 保持翻译和原句不变，但更新状态信息
+            ttsStatusMessage.textContent = '已停止。';
+        }
+
+
+        // --- TTS/翻译/时间戳生成函数 (保持不变) ---
+        
+        /**
+         * 调用 Gemini API 生成音频 Blob URL
+         */
+        async function generateTtsAudio(text) {
+            
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: text }] }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            prebuiltVoiceConfig: { voiceName: TTS_VOICE }
+                        }
+                    }
+                },
+            };
+
+            for (let retry = 0; retry < MAX_RETRIES; retry++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
+                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`TTS API failed: ${response.status} - ${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    const part = result?.candidates?.[0]?.content?.parts?.[0];
+                    const audioData = part?.inlineData?.data;
+
+                    if (audioData) {
+                        const pcmData = base64ToArrayBuffer(audioData);
+                        const pcm16 = new Int16Array(pcmData);
+                        
+                        const wavBlob = pcmToWav(pcm16, 24000); 
+                        const audioUrl = URL.createObjectURL(wavBlob);
+                        
+                        return audioUrl;
+
+                    } else {
+                        throw new Error("TTS API returned invalid audio data structure.");
+                    }
+
+                } catch (error) {
+                    if (retry === MAX_RETRIES - 1) {
+                        throw new Error("TTS API 最终调用失败: " + error.message);
+                    }
+                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            throw new Error("TTS API 最终调用失败 (未知原因).");
+        }
+
+        /**
+         * 调用 Gemini API 将文本翻译成中文
+         */
+        async function callGeminiTranslation(text) {
+            
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${apiKey}`; 
+
+            const userQuery = `Translate the following English text into simple, natural Chinese, outputting only the translation text:\n\n"${text}"`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+            };
+
+            for (let retry = 0; retry < MAX_RETRIES; retry++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
+                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`Translation API failed: ${response.status} - ${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    const translatedText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                    
+                    if (translatedText) {
+                        return translatedText.trim();
+                    } else {
+                        throw new Error("API returned an empty translation.");
+                    }
+
+                } catch (error) {
+                    if (retry === MAX_RETRIES - 1) {
+                        throw new Error("Translation API 最终调用失败: " + error.message);
+                    }
+                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            throw new Error("Translation API 最终调用失败 (未知原因).");
+        }
+
+
+        /**
+         * 调用 Gemini API 模拟生成单词时间戳 JSON
+         */
+        async function callGeminiTiming(text) {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${apiKey}`;
+
+            const systemPrompt = `You are a text alignment specialist. Analyze the following English text. Break it down into individual words. Estimate a plausible start and end time in seconds for each word, assuming natural, continuous, and clear speech. The 'end' time of a word should be close to the 'start' time of the next word. Output only a JSON array.`;
+            
+            const userQuery = `Generate word timings for the following text: "${text}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                "word": { "type": "STRING", "description": "The individual word." },
+                                "start": { "type": "NUMBER", "description": "Start time in seconds (e.g., 0.0)." },
+                                "end": { "type": "NUMBER", "description": "End time in seconds (e.g., 0.5)." }
+                            },
+                            required: ["word", "start", "end"]
+                        }
+                    }
+                }
+            };
+
+            for (let retry = 0; retry < MAX_RETRIES; retry++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
+                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`Timing API failed: ${response.status} - ${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    const jsonString = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (!jsonString) {
+                        throw new Error("API returned an invalid or empty JSON response structure for timing.");
+                    }
+                    
+                    const data = JSON.parse(jsonString);
+
+                    if (!Array.isArray(data)) {
+                         throw new Error("Timing API 返回的结构不是预期的数组格式。");
+                    }
+                    
+                    return data;
+
+                } catch (error) {
+                    if (retry === MAX_RETRIES - 1) {
+                        console.error("Gemini Timing call failed after all retries.", error);
+                        throw new Error("Timing API 最终调用失败: " + error.message);
+                    }
+                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            throw new Error("Timing API 最终调用失败 (未知原因).");
+        }
+
+
+        // --- OCR 流程 ---
+        
+        function canvasToBase64(canvas) {
+            const dataURL = canvas.toDataURL('image/png');
+            return dataURL.split(',')[1];
+        }
+        
+        async function callGeminiOCR(base64Image) {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${apiKey}`;
+
+            const systemPrompt = `You are a specialized OCR tool for English. Your task is to detect and extract *every* individual English sentence or distinct title block from the image. For maximum accuracy, ensure the bounding box tightly encompasses only the text it describes, avoiding surrounding whitespace or graphics.
+            For each block, provide the text content and its normalized bounding box (bbox).
+            The bbox must be an array of four numbers: [x_min, y_min, x_max, y_max], where all values are relative to the image size and normalized to a 0-1000 scale. x_min=0 and y_min=0 is the top-left corner.
+            Do not include any other languages or unnecessary formatting.`;
+            
+            const userQuery = "Extract English text blocks and their normalized bounding boxes from this image.";
+
+            const payload = {
+                contents: [{
+                    role: "user",
+                    parts: [
+                        { text: userQuery },
+                        {
+                            inlineData: {
+                                mimeType: "image/png",
+                                data: base64Image
+                            }
+                        }
+                    ]
+                }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                "text": { "type": "STRING", "description": "The extracted English text block." },
+                                "bbox": { 
+                                    "type": "ARRAY", 
+                                    "description": "Normalized bounding box [x_min, y_min, x_max, y_max] from 0 to 1000.",
+                                    "items": { "type": "NUMBER" }
+                                }
+                            },
+                            required: ["text", "bbox"]
+                        }
+                    }
+                }
+            };
+
+            for (let retry = 0; retry < MAX_RETRIES; retry++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
+                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`OCR API failed: ${response.status} - ${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    const jsonString = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (!jsonString) {
+                        throw new Error("API returned an invalid or empty JSON response structure.");
+                    }
+                    
+                    const data = JSON.parse(jsonString);
+
+                    if (!Array.isArray(data)) {
+                         throw new Error("OCR API 返回的结构不是预期的数组格式。");
+                    }
+                    
+                    return data.filter(item => 
+                        item.text && item.text.trim().length > 0 && 
+                        Array.isArray(item.bbox) && item.bbox.length === 4 &&
+                        item.bbox.every(n => typeof n === 'number')
+                    );
+
+                } catch (error) {
+                    if (retry === MAX_RETRIES - 1) {
+                        console.error("Gemini OCR call failed after all retries.", error);
+                        throw new Error("OCR API 最终调用失败: " + error.message);
+                    }
+                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            throw new Error("OCR API 最终调用失败 (未知原因).");
+        }
+        
+        /**
+         * 将 OCR 结果渲染到右侧面板 (包含翻译)
+         * @param {Array} data - OCR 结果数组，包含 text 和 translation 属性
+         */
+        function displayOCRText(data) {
+            ocrTextPanel.innerHTML = '';
+            
+            if (data.length === 0) {
+                ocrTextPanel.innerHTML = '<p class="text-gray-500 italic">当前页面未识别到可提取的文本块。</p>';
+                return;
+            }
+
+            // 使用 flex 布局来显示每个文本块，并添加样式以区分
+            data.forEach((item, index) => {
+                const textBlock = document.createElement('div');
+                textBlock.classList.add('p-3', 'border', 'border-gray-200', 'rounded-lg', 'bg-white', 'shadow-sm', 'hover:bg-gray-50', 'transition', 'cursor-pointer', 'flex', 'items-start', 'space-x-3');
+                textBlock.setAttribute('data-index', index);
+                
+                // 序号标记 (与 Canvas 上的标记对应)
+                const indexSpan = document.createElement('span');
+                indexSpan.classList.add('flex-shrink-0', 'w-6', 'h-6', 'flex', 'items-center', 'justify-center', 'rounded-full', 'bg-purple-600', 'text-white', 'text-xs', 'font-bold');
+                indexSpan.textContent = index + 1; // 从 1 开始编号
+                
+                // 文本内容容器
+                const contentDiv = document.createElement('div');
+                contentDiv.classList.add('flex-grow');
+                
+                // 英文原文
+                const pText = document.createElement('p');
+                pText.classList.add('text-sm', 'text-gray-900', 'leading-relaxed', 'font-medium');
+                pText.textContent = item.text; // 英文文本
+
+                // 中文翻译
+                const pTranslation = document.createElement('p');
+                pTranslation.classList.add('text-xs', 'text-gray-500', 'mt-1', 'italic');
+                pTranslation.textContent = item.translation || '翻译失败。'; // 显示翻译结果
+                
+                contentDiv.appendChild(pText);
+                contentDiv.appendChild(pTranslation);
+
+                textBlock.appendChild(indexSpan);
+                textBlock.appendChild(contentDiv);
+                
+                // 添加点击事件，点击侧边栏的文本块也会触发播放
+                textBlock.onclick = (e) => handleTextPanelClick(e, item.bbox, item.text);
+
+                ocrTextPanel.appendChild(textBlock);
+            });
+        }
+        
+        /**
+         * 在 Canvas Overlay 上渲染数字序号标记
+         * @param {Array} data - OCR 结果数组
+         */
+        function renderOcrMarkers(data) {
+            // 清除 Canvas 上已有的标记
+            clickOverlay.querySelectorAll('.ocr-marker').forEach(marker => marker.remove());
+
+            if (data.length === 0) return;
+
+            const rectOverlay = clickOverlay.getBoundingClientRect(); 
+            const width = rectOverlay.width;
+            const height = rectOverlay.height;
+            const markerSize = 24; // 标记大小 24px
+
+            data.forEach((item, index) => {
+                const [x_min, y_min] = item.bbox;
+
+                // 计算位置 (左上角)
+                const pixelX = (x_min / BBOX_NORM_SIZE) * width;
+                const pixelY = (y_min / BBOX_NORM_SIZE) * height;
+
+                const marker = document.createElement('div');
+                marker.classList.add('ocr-marker', 'absolute', 'flex', 'items-center', 'justify-center', 'rounded-full', 'bg-purple-600', 'text-white', 'text-xs', 'font-bold', 'shadow-lg', 'z-30', 'transition', 'duration-200', 'hover:scale-110');
+                marker.textContent = index + 1; // 从 1 开始编号
+
+                // 应用样式和定位
+                marker.style.width = `${markerSize}px`;
+                marker.style.height = `${markerSize}px`;
+                
+                // 调整位置，使其位于文本块的左上角外部
+                marker.style.left = `${pixelX - markerSize / 2 - 5}px`; 
+                marker.style.top = `${pixelY - markerSize / 2 - 5}px`;
+                
+                // 防止标记本身捕获点击事件
+                marker.style.pointerEvents = 'none';
+
+                clickOverlay.appendChild(marker);
+            });
+        }
+
+
+        window.runOCR = async function(isAuto = false) {
+            if (!pdfDoc || canvasWrapper.classList.contains('hidden')) {
+                if (isAuto) return; 
+                showError("请先加载 PDF 文件并确保当前页面可见。");
+                return;
+            }
+
+            const originalBtnHTML = ocrBtn.innerHTML;
+            ocrBtn.disabled = true;
+
+            const loadingText = isAuto ? '正在自动识别坐标...' : '正在重新识别坐标...';
+            
+            ocrBtn.innerHTML = `
+                <svg class="animate-spin h-5 w-5 mr-1 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                ${loadingText}
+            `;
+
+            errorBox.classList.add('hidden');
+            ttsStatusBox.classList.add('hidden');
+            ocrData = [];
+            clickOverlay.classList.add('hidden');
+            clickOverlay.style.pointerEvents = 'none';
+            clickOverlay.querySelectorAll('.ocr-marker').forEach(m => m.remove()); // 清除旧标记
+            stopPlaybackAndCleanup();
+            
+            // 文本面板显示 OCR 加载状态
+            ocrTextPanel.innerHTML = `
+                <div class="flex items-center text-blue-500">
+                    <svg class="animate-spin h-5 w-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>正在执行 Gemini Vision OCR... (步骤 1/2)</span>
+                </div>
+            `;
+
+
+            try {
+                // 1. OCR 识别文本块
+                const base64Image = canvasToBase64(canvas);
+                const results = await callGeminiOCR(base64Image);
+                
+                if (results.length === 0) {
+                    ocrData = [];
+                } else {
+                    // 2. 翻译所有提取的文本 (并发)
+                    ocrBtn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-1 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> 正在翻译所有文本块... (步骤 2/2)`;
+                    ocrTextPanel.innerHTML = `
+                        <div class="flex items-center text-blue-500">
+                            <svg class="animate-spin h-5 w-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            <span>正在翻译所有识别的文本... (步骤 2/2)</span>
+                        </div>
+                    `;
+                    
+                    const translationPromises = results.map(item => callGeminiTranslation(item.text).catch(err => {
+                        console.error("Translation failed for text:", item.text, err);
+                        return '自动翻译失败。'; // Fallback text
+                    }));
+
+                    const translations = await Promise.all(translationPromises);
+
+                    // 3. 组合结果
+                    ocrData = results.map((item, index) => ({
+                        ...item,
+                        translation: translations[index]
+                    }));
+                }
+
+
+                // 4. 显示和渲染标记
+                displayOCRText(ocrData);
+                renderOcrMarkers(ocrData);
+
+                if (ocrData.length === 0) {
+                    ttsStatusMessage.textContent = 'OCR/翻译完成，但未识别到可点击的英文文本块。';
+                    ttsStatusBox.classList.remove('hidden');
+                } else {
+                    ttsStatusMessage.textContent = `OCR/翻译完成，识别到 ${ocrData.length} 个文本块。现在您可以直接点击图片上的文本区域或右侧文本块来播放音频。`;
+                    ttsStatusBox.classList.remove('hidden');
+                    clickOverlay.classList.remove('hidden');
+                    clickOverlay.style.pointerEvents = 'auto'; 
+                }
+
+            } catch (error) {
+                console.error("OCR 或翻译提取失败:", error);
+                ttsStatusMessage.textContent = `OCR 或翻译提取失败: ${error.message}`;
+                ttsStatusBox.classList.remove('bg-blue-100', 'border-blue-400');
+                ttsStatusBox.classList.add('bg-red-100', 'border-red-400');
+                ttsStatusBox.classList.remove('hidden');
+                
+                // 文本面板显示错误信息
+                ocrTextPanel.innerHTML = `<p class="text-red-500 font-semibold">OCR 或翻译失败: ${error.message}</p>`;
+
+            } finally {
+                ocrBtn.innerHTML = originalBtnHTML;
+                ocrBtn.disabled = false; 
+                updateNavigationButtons(); 
+            }
+        };
+
+
+        // --- 同步高亮逻辑 (保持不变) ---
+
+        /**
+         * 渲染单词到同步显示区
+         */
+        function renderSyncedWords(timings) {
+            syncedWordDisplay.innerHTML = '';
+            wordSyncWrapper.classList.remove('hidden');
+
+            timings.forEach((item, index) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.id = `synced-word-${index}`;
+                wordSpan.textContent = item.word;
+                wordSpan.classList.add('word', 'inline-block', 'mx-0.5', 'py-1', 'px-1', 'rounded-lg');
+                
+                // 添加到容器
+                syncedWordDisplay.appendChild(wordSpan);
+
+                // 添加空格分隔符
+                const spaceSpan = document.createElement('span');
+                spaceSpan.textContent = ' ';
+                spaceSpan.classList.add('inline-block', 'whitespace-pre');
+                syncedWordDisplay.appendChild(spaceSpan);
+            });
+        }
+
+        /**
+         * 启动同步高亮计时器
+         */
+        function startWordSynchronization(audio, timings) {
+            if (currentSyncInterval) {
+                clearInterval(currentSyncInterval);
+            }
+            
+            // 使用 interval 来模拟 audioPlayer.timeupdate 事件
+            currentSyncInterval = setInterval(() => {
+                const currentTime = audio.currentTime;
+                
+                let newWordIndex = -1;
+                
+                for (let i = 0; i < timings.length; i++) {
+                    const timing = timings[i];
+                    // 使用 < 和 >= 确保时间点的包含性
+                    if (currentTime >= timing.start && currentTime < timing.end) {
+                        newWordIndex = i;
+                        break; 
+                    }
+                }
+
+                if (newWordIndex !== currentWordIndex) {
+                    // 1. 移除上一个单词的高亮
+                    if (currentWordIndex !== -1) {
+                        const prevSpan = document.getElementById(`synced-word-${currentWordIndex}`);
+                        if (prevSpan) {
+                            prevSpan.classList.remove('highlighted-word');
+                        }
+                    }
+
+                    // 2. 应用新单词的高亮
+                    if (newWordIndex !== -1) {
+                        const newSpan = document.getElementById(`synced-word-${newWordIndex}`);
+                        if (newSpan) {
+                            newSpan.classList.add('highlighted-word');
+                        }
+                    }
+
+                    // 3. 更新当前索引
+                    currentWordIndex = newWordIndex;
+                }
+            }, 100); 
+
+            // 音频播放结束时停止同步
+            audio.onended = () => {
+                stopPlaybackAndCleanup();
+                ttsStatusMessage.textContent = '播放完成。';
+                // 移除所有单词高亮
+                syncedWordDisplay.querySelectorAll('.highlighted-word').forEach(span => {
+                    span.classList.remove('highlighted-word');
+                });
+            };
+            audio.onerror = (e) => {
+                console.error("Audio playback error:", e);
+                ttsStatusMessage.textContent = '音频播放错误。';
+                if (currentSpeakingElement) currentSpeakingElement.style.border = '2px solid red'; 
+                stopPlaybackAndCleanup();
+            };
+        }
+        
+        /**
+         * 集中处理 TTS、翻译和播放逻辑
+         * @param {Array} matchedBbox - 匹配到的文本块的边界框 [x_min, y_min, x_max, y_max]
+         * @param {string} matchedText - 匹配到的文本内容
+         */
+        async function processPlayback(matchedBbox, matchedText) {
+            
+            // UI 准备阶段
+            ttsStatusBox.classList.remove('hidden', 'bg-red-100', 'border-red-400');
+            ttsStatusBox.classList.add('bg-blue-100', 'border-blue-400');
+            originalTextDisplay.textContent = matchedText; 
+            translatedTextElement.textContent = '正在翻译...';
+            translatedTextElement.classList.remove('text-red-600');
+            ttsStatusMessage.innerHTML = `
+                <svg class="animate-spin h-4 w-4 mr-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                正在执行 TTS、翻译和时间戳生成 (请稍候)...
+            `;
+            wordSyncWrapper.classList.add('hidden'); 
+
+            // 创建 Canvas 上的高亮框
+            const [x_min, y_min, x_max, y_max] = matchedBbox;
+            const highlightDiv = document.createElement('div');
+            
+            // 重新获取尺寸，确保准确
+            const rectOverlay = clickOverlay.getBoundingClientRect(); 
+            const pixelX = (x_min / BBOX_NORM_SIZE) * rectOverlay.width;
+            const pixelY = (y_min / BBOX_NORM_SIZE) * rectOverlay.height;
+            const pixelWidth = ((x_max - x_min) / BBOX_NORM_SIZE) * rectOverlay.width;
+            const pixelHeight = ((y_max - y_min) / BBOX_NORM_SIZE) * rectOverlay.height;
+
+            // BUG FIX: 调整高亮样式
+            highlightDiv.style.cssText = `
+                position: absolute;
+                left: ${pixelX}px;
+                top: ${pixelY}px;
+                width: ${pixelWidth}px;
+                height: ${pixelHeight}px;
+                border: 2px solid rgba(103, 58, 183, 1); 
+                background-color: rgba(103, 58, 183, 0.15); 
+                border-radius: 4px; /* 增加圆角 */
+                pointer-events: none;
+                transition: all 0.1s ease-out;
+                z-index: 20;
+            `;
+            
+            clickOverlay.appendChild(highlightDiv);
+            currentSpeakingElement = highlightDiv;
+            
+            // 4. 并发调用所有服务
+            try {
+                // BUG FIX: 避免重复翻译。现在点击时，先尝试从 ocrData 中查找已有的翻译结果。
+                let translation;
+                const existingData = ocrData.find(item => item.text === matchedText && item.bbox.join(',') === matchedBbox.join(','));
+                
+                if (existingData && existingData.translation && existingData.translation !== '自动翻译失败。') {
+                    translation = existingData.translation;
+                } else {
+                    // 如果找不到，或者翻译失败，则重新翻译
+                    translation = await callGeminiTranslation(matchedText);
+                }
+
+
+                const [audioUrl, timingData] = await Promise.all([
+                    generateTtsAudio(matchedText),
+                    callGeminiTiming(matchedText)
+                ]);
+
+                // 5. 更新翻译
+                translatedTextElement.textContent = translation;
+
+                // 6. 播放和同步
+                currentAudio = new Audio(audioUrl);
+                currentAudio.volume = 0.8; 
+                
+                // 渲染单词，并启动同步
+                renderSyncedWords(timingData);
+                startWordSynchronization(currentAudio, timingData);
+
+                await currentAudio.play();
+                ttsStatusMessage.textContent = `正在播放音频: "${matchedText.substring(0, 50)}..."`;
+
+            } catch (error) {
+                console.error("处理点击请求失败:", error);
+                
+                ttsStatusMessage.textContent = `处理失败: ${error.message}`;
+                ttsStatusBox.classList.remove('bg-blue-100', 'border-blue-400');
+                ttsStatusBox.classList.add('bg-red-100', 'border-red-400');
+                
+                translatedTextElement.textContent = '翻译失败或未完成。';
+                translatedTextElement.classList.add('text-red-600');
+                
+                if (currentSpeakingElement) currentSpeakingElement.style.border = '2px solid red';
+                stopPlaybackAndCleanup();
+            }
+        }
+
+
+        // --- 碰撞检测与点击处理 ---
+
+        window.handleCanvasClick = async function(event) {
+            if (ocrData.length === 0) {
+                ttsStatusMessage.textContent = '文本识别未完成或未识别到文本块。';
+                ttsStatusBox.classList.remove('hidden');
+                return;
+            }
+
+            stopPlaybackAndCleanup(); // 开始新任务时，清理旧任务
+
+            // 1. 获取点击位置并归一化
+            const rect = clickOverlay.getBoundingClientRect();
+            const clickX = event.clientX - rect.left;
+            const clickY = event.clientY - rect.top;
+
+            const normX = (clickX / rect.width) * BBOX_NORM_SIZE;
+            const normY = (clickY / rect.height) * BBOX_NORM_SIZE;
+
+            let matchedText = null;
+            let matchedBbox = null;
+
+            // 2. 碰撞检测
+            for (const item of ocrData) {
+                const [x_min, y_min, x_max, y_max] = item.bbox;
+                
+                if (normX >= x_min && normX <= x_max && normY >= y_min && normY <= y_max) {
+                    matchedText = item.text;
+                    matchedBbox = item.bbox;
+                    break;
+                }
+            }
+            
+            // 3. 处理匹配结果
+            if (!matchedText) {
+                ttsStatusMessage.textContent = '未点击到识别的英文文本块。请再试一次。';
+                ttsStatusBox.classList.remove('hidden');
+                originalTextDisplay.textContent = '';
+                translatedTextElement.textContent = '';
+                return;
+            }
+
+            await processPlayback(matchedBbox, matchedText);
+        };
+        
+        /**
+         * 处理侧边栏文本块的点击事件
+         */
+        async function handleTextPanelClick(event, bbox, text) {
+            stopPlaybackAndCleanup();
+            await processPlayback(bbox, text);
+        }
+
+        // 监听键盘事件实现翻页
+        document.addEventListener('keydown', (e) => {
+            if (pdfDoc) {
+                if (e.key === 'ArrowLeft' && currentPage > 1) {
+                    goToPage(currentPage - 1);
+                } else if (e.key === 'ArrowRight' && currentPage < pdfDoc.numPages) {
+                    goToPage(currentPage + 1);
+                }
+            }
+        });
+
+    </script>
+
+</body></html>
