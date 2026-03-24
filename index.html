@@ -4,7 +4,7 @@
         window.__firebase_config = firebaseConfig;
         window.__initial_auth_token = initialAuthToken;
         window.__app_id = appId;
-            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxYmYyOWUyNjI1Yzk1NzI0YWQ3OWJhNGE0ZjcxNDBjNDA0NGRlNjIiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNjI4NjcxNjg3MzM4NDc0NzM3MSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2FjNmJhMDQ5OWY3NTllZjBfZWJvb2tfdmlld2VyLmh0bWwtNDE5In0sImV4cCI6MTc3NDI1NDI1NSwiaWF0IjoxNzc0MjUwNjU1LCJhbGciOiJSUzI1NiJ9.tc5T2LNUdkw8zCLZbgXpXvkNQoZngiDYg_uZhetiaYuNWv5NC8tjTQ540yotOYKUFmCxatrCEr-d6i74qQRVM4pfHpR1w0GGT7zdJn_Y7HnzXEDJ9__W-QufKeZ86UEJayD5T4OZgZFwlxY4ftzTWoSavN8INivhqDX8lpW_QML4rBuAN6h1vo_R2dHAlV41i9vIA9m-4aLb4vYkV603x9PWTyFV9R8z3XUbFLvx-h2fSYtqe00S4EBrm--yMztni3nnAChP4HApXPMHWw438wg5lNMKHyiT30VNbZVb-hSLMok_fY-aCglMBZ9Fi6LEQxHxN9pY-3buRK7n9MnxoA","c_ac6ba0499f759ef0_ebook_viewer.html-419")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+            })("{}","","English_pdf_reader")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
 function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
 p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
 
@@ -555,7 +555,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 })();</script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF 电子书阅读器 (点击播放、翻译和文本识别)</title>
+    <title>英语课本pdf音频文本提取工具</title>
     <!-- 引入 Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/"></script>
     <!-- 引入 PDF.js 库 -->
@@ -659,7 +659,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             display: inline-block; 
         }
 
-        /* 用于捕获点击事件的透明覆盖层 */
+        /* 透明覆盖层：用于显示 OCR 序号标记（不接收点击） */
         #click-overlay {
             position: absolute;
             top: 0;
@@ -696,47 +696,81 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     <div class="w-full max-w-7xl space-y-6">
         <!-- 头部/标题 -->
         <h1 class="text-3xl font-bold text-gray-800 text-center mt-4">
-            📚 PDF 电子书阅读器 (点击播放、翻译和文本识别)
+            📚 英语课本pdf音频文本提取工具
         </h1>
         <p class="text-center text-sm text-gray-500">
-            PDF 页面加载后将**自动**运行 OCR 识别文本并翻译。识别完成后，您可以点击页面上的英文文本块来播放音频、查看翻译，并在右侧查看提取的文本。识别出的文本块会用
-            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-bold">1</span>
-            等序号标记。
+            PDF 页面加载后，点击【识别/翻译】按钮开始 OCR 识别与翻译。识别完成后，您可以点击右侧英文文本块来播放音频，或拖拽以改变句子的顺序。
         </p>
 
         <!-- 文件上传和控制区 -->
-        <div id="controls" class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0 xl:space-x-4">
+        <div id="controls" class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 flex flex-col space-y-5">
             
-            <!-- 上传按钮 -->
-            <label for="pdf-file-input" class="cursor-pointer flex-shrink-0">
-                <div class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-                    选择 PDF 文件 ( &lt; 500MB)
+            <!-- 第一行：OpenRouter 配置 -->
+            <div id="openrouter-config" class="w-full flex flex-col sm:flex-row items-center gap-3 justify-start border-b border-gray-100 pb-5">
+                <div class="flex items-center text-gray-700 font-semibold text-sm w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-indigo-500"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    API 配置
                 </div>
-            </label>
-            <input type="file" id="pdf-file-input" accept="application/pdf" onchange="handleFileUpload(event)">
-
-            <!-- 页面信息 -->
-            <div id="page-info" class="text-lg font-medium text-gray-700 hidden flex-shrink-0">
-                <span id="current-page-display">1</span> / <span id="total-pages-display">0</span>
+                <input id="openrouter-key-input" type="password" placeholder="OpenRouter API Key（仅保存在本机）" class="flex-1 sm:max-w-sm px-4 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-gray-50 focus:bg-white transition-colors" autocomplete="off">
+                <input id="openrouter-model-input" type="text" placeholder="模型（例如 openai/gpt-4o-mini）" class="flex-1 sm:max-w-xs px-4 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-gray-50 focus:bg-white transition-colors" autocomplete="off">
+                <button id="openrouter-save-btn" type="button" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-semibold shadow-sm transition-all active:scale-95">
+                    保存
+                </button>
+                <span id="openrouter-status" class="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-100 text-gray-500 sm:ml-2">未配置</span>
             </div>
 
-            <!-- 导航和 OCR 按钮 -->
-            <div class="flex space-x-3 flex-shrink-0">
-                <button id="ocr-btn" onclick="runOCR(false)" class="p-3 bg-green-500 hover:bg-green-600 text-white rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition duration-150 font-semibold flex items-center" disabled="">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-1"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path><path d="M7 10h10"></path></svg>
-                    重新识别/翻译文本 (OCR)
-                </button>
-                <button id="prev-btn" onclick="goPrevPage()" class="p-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition duration-150" disabled="">
-                    <!-- Chevron Left Icon (Lucide) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m15 18-6-6 6-6"></path></svg>
-                </button>
-                <button id="next-btn" onclick="goNextPage()" class="p-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition duration-150" disabled="">
-                    <!-- Chevron Right Icon (Lucide) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m9 18 6-6-6-6"></path></svg>
-                </button>
+            <!-- 第二行：操作按钮 -->
+            <div class="flex flex-col sm:flex-row flex-wrap items-center justify-between gap-4">
+                
+                <!-- 左侧：文件操作与分页 -->
+                <div class="flex items-center gap-3">
+                    <!-- 上传按钮 -->
+                    <label for="pdf-file-input" class="cursor-pointer mb-0">
+                        <div class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-5 rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            选择 PDF
+                        </div>
+                    </label>
+                    <input type="file" id="pdf-file-input" class="hidden" accept="application/pdf" onchange="handleFileUpload(event)">
+
+                    <div class="h-6 w-px bg-gray-200 mx-1 hidden sm:block"></div>
+
+                    <!-- 分页控件 -->
+                    <div class="flex items-center bg-gray-50 p-1 rounded-xl border border-gray-200">
+                        <button id="prev-btn" onclick="goPrevPage()" class="p-2 text-gray-600 hover:bg-white hover:text-gray-900 hover:shadow-sm rounded-lg disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:shadow-none transition-all" disabled="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+                        </button>
+                        <div id="page-info" class="text-sm font-semibold text-gray-700 px-3 min-w-[4rem] text-center hidden">
+                            <span id="current-page-display">1</span> / <span id="total-pages-display">0</span>
+                        </div>
+                        <button id="next-btn" onclick="goNextPage()" class="p-2 text-gray-600 hover:bg-white hover:text-gray-900 hover:shadow-sm rounded-lg disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:shadow-none transition-all" disabled="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 右侧：功能按钮 -->
+                <div class="flex items-center gap-3">
+                    <button id="ocr-btn" onclick="runOCR(false)" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl shadow-sm disabled:opacity-50 disabled:cursor-not-allowed transition-all font-semibold flex items-center gap-2 active:scale-95" disabled="">            
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"></path><path d="M9 20h6"></path><path d="M12 4v16"></path></svg>
+                        识别当前页
+                    </button>
+                    <button id="bulk-ocr-btn" onclick="runBulkOCR()" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl shadow-sm disabled:opacity-50 disabled:cursor-not-allowed transition-all font-semibold flex items-center gap-2 active:scale-95" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        一键识别全部
+                    </button>
+                    <button id="export-data-btn" onclick="exportDataXlsx()" class="px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white rounded-xl shadow-sm disabled:opacity-50 disabled:cursor-not-allowed transition-all font-semibold flex items-center gap-2 active:scale-95" disabled="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        生成数据包
+                    </button>
+                </div>
+
             </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
         <!-- 主内容区域: PDF Viewer (左) + Extracted Text Panel (右) -->
         <div id="main-content-area" class="flex flex-col lg:flex-row gap-6">
 
@@ -755,15 +789,14 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                     
                     <!-- 初始提示 -->
                     <div id="initial-message" class="flex flex-col items-center justify-center p-8 text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><path d="M4 19.5V15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"></path><path d="M12 19.5V15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2Z"></path><path d="M10 2v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V2"></path></svg>
                         <p class="text-lg">点击上方的按钮选择 PDF 文件开始阅读。</p>
                     </div>
 
                     <!-- PDF/点击交互区域 -->
                     <div id="canvas-wrapper" class="hidden">
                         <canvas id="pdf-canvas" class="block rounded-xl"></canvas>
-                        <!-- 透明覆盖层，用于捕获点击和显示标记 -->
-                        <div id="click-overlay" class="cursor-text hidden" onclick="handleCanvasClick(event)"></div>
+                        <!-- 透明覆盖层：仅用于显示序号标记 -->
+                        <div id="click-overlay" class="hidden"></div>
                     </div>
                     
                     <!-- 错误提示框 -->
@@ -772,38 +805,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                         <span id="error-message" class="block sm:inline"></span>
                     </div>
                 </div>
-
-                <!-- TTS 状态信息 (包含翻译显示) -->
-                <div id="tts-status-box" class="p-4 bg-blue-100 border border-blue-400 text-blue-700 rounded-lg hidden shadow-md">
-                    <p class="font-semibold text-gray-700 mb-1">播放状态 (Playback Status):</p>
-                    <p id="tts-status-message" class="flex items-center text-sm font-medium mb-2">
-                        <!-- TTS 状态信息将显示在这里 -->
-                    </p>
-                    
-                    <!-- 英文原句显示区 (提供上下文) -->
-                    <div id="original-text-display-wrapper" class="pt-2 mt-2 border-t border-blue-300">
-                        <p class="font-semibold text-gray-700 mb-1">英文原句 (Original Text):</p>
-                        <p id="original-text-display" class="text-gray-900 text-base font-bold"></p>
-                    </div>
-
-                    <!-- 播放/同步区域 - 包含同步英文和中文翻译，用边框和间距与上文隔离 -->
-                    <div id="playback-and-translation-area" class="pt-2 mt-2 border-t border-blue-300">
-
-                        <!-- 单词级同步显示区 -->
-                        <div id="word-sync-wrapper" class="hidden">
-                            <p class="font-semibold text-gray-700 mb-1">同步播放 (Word Sync):</p>
-                            <div id="synced-word-display" class="text-gray-900 text-base font-bold flex flex-wrap leading-relaxed">
-                                <!-- Spans for individual words will go here -->
-                            </div>
-                        </div>
-
-                        <!-- 翻译显示区 (现在紧跟在同步词汇下方，mt-3 提供与同步词汇的间距) -->
-                        <div id="translation-display-wrapper" class="mt-3">
-                            <p class="font-semibold text-gray-700 mb-1">中文翻译 (Translation):</p>
-                            <p id="translated-text" class="text-gray-900 text-base"></p>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
 
             <!-- 右侧区域：OCR 提取文本面板 (新增) -->
@@ -836,12 +838,18 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         let ocrData = []; // 存储 { text, bbox, translation }
         let currentSpeakingElement = null; 
         let currentWordIndex = -1; 
+        let currentSpeechUtterance = null;
+        let currentSpeechStartPerfMs = null;
+        let draggedOcrIndex = null;
+        const ocrCacheByPage = new Map();
+        let bulkOcrRunning = false;
 
         const MAX_FILE_SIZE_MB = 500;
         const MAX_RETRIES = 5;
-        const OCR_MODEL = 'gemini-2.5-flash-preview-09-2025';
-        const TTS_MODEL = 'gemini-2.5-flash-preview-tts';
-        const TTS_VOICE = 'Kore'; 
+        const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1';
+        const OPENROUTER_DEFAULT_MODEL = 'openai/gpt-4o-mini';
+        const OPENROUTER_API_KEY_STORAGE = 'openrouter_api_key';
+        const OPENROUTER_MODEL_STORAGE = 'openrouter_model';
         const BBOX_NORM_SIZE = 1000; 
 
         // --- DOM 元素 ---
@@ -852,6 +860,8 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         const ocrBtn = document.getElementById('ocr-btn'); 
+        const bulkOcrBtn = document.getElementById('bulk-ocr-btn');
+        const exportDataBtn = document.getElementById('export-data-btn');
         const currentPageDisplay = document.getElementById('current-page-display');
         const totalPagesDisplay = document.getElementById('total-pages-display');
         const loadingSpinner = document.getElementById('loading-spinner');
@@ -864,13 +874,56 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         const ocrTextPanel = document.getElementById('ocr-text-panel');
         const ocrInitialMessage = document.getElementById('ocr-initial-message');
         
-        // TTS/翻译/同步状态元素
-        const ttsStatusBox = document.getElementById('tts-status-box'); 
-        const ttsStatusMessage = document.getElementById('tts-status-message');
-        const originalTextDisplay = document.getElementById('original-text-display');
-        const translatedTextElement = document.getElementById('translated-text');
-        const wordSyncWrapper = document.getElementById('word-sync-wrapper'); 
-        const syncedWordDisplay = document.getElementById('synced-word-display'); 
+        const openrouterKeyInput = document.getElementById('openrouter-key-input');
+        const openrouterModelInput = document.getElementById('openrouter-model-input');
+        const openrouterSaveBtn = document.getElementById('openrouter-save-btn');
+        const openrouterStatus = document.getElementById('openrouter-status');
+
+        function setOpenRouterStatus(text) {
+            if (!openrouterStatus) return;
+            openrouterStatus.textContent = text || '';
+        }
+
+        function getOpenRouterApiKey() {
+            const key = (localStorage.getItem(OPENROUTER_API_KEY_STORAGE) || '').trim();
+            return key || null;
+        }
+
+        function getOpenRouterModel() {
+            const stored = (localStorage.getItem(OPENROUTER_MODEL_STORAGE) || '').trim();
+            const input = (openrouterModelInput?.value || '').trim();
+            return stored || input || OPENROUTER_DEFAULT_MODEL;
+        }
+
+        function syncOpenRouterConfigUI() {
+            if (openrouterModelInput) {
+                const storedModel = (localStorage.getItem(OPENROUTER_MODEL_STORAGE) || '').trim();
+                openrouterModelInput.value = storedModel || OPENROUTER_DEFAULT_MODEL;
+            }
+            if (openrouterKeyInput) {
+                openrouterKeyInput.value = '';
+            }
+            const hasKey = !!getOpenRouterApiKey();
+            setOpenRouterStatus(hasKey ? '已配置' : '未配置');
+        }
+
+        if (openrouterSaveBtn) {
+            openrouterSaveBtn.addEventListener('click', () => {
+                const key = (openrouterKeyInput?.value || '').trim();
+                const model = (openrouterModelInput?.value || '').trim();
+                if (key) {
+                    localStorage.setItem(OPENROUTER_API_KEY_STORAGE, key);
+                    if (openrouterKeyInput) openrouterKeyInput.value = '';
+                }
+                if (model) {
+                    localStorage.setItem(OPENROUTER_MODEL_STORAGE, model);
+                } else {
+                    localStorage.removeItem(OPENROUTER_MODEL_STORAGE);
+                }
+                syncOpenRouterConfigUI();
+            });
+        }
+        syncOpenRouterConfigUI();
 
 
         // --- 核心工具函数 (PCM to WAV) ---
@@ -959,7 +1012,8 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             prevBtn.disabled = true;
             nextBtn.disabled = true;
             ocrBtn.disabled = true;
-            ttsStatusBox.classList.add('hidden');
+            if (bulkOcrBtn) bulkOcrBtn.disabled = true;
+            if (exportDataBtn) exportDataBtn.disabled = true;
             
             ocrData = [];
             clickOverlay.classList.add('hidden');
@@ -972,7 +1026,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    <span>正在渲染 PDF 和准备 OCR...</span>
+                    <span>正在渲染 PDF...</span>
                 </div>
             `;
             clickOverlay.querySelectorAll('.ocr-marker').forEach(m => m.remove());
@@ -985,11 +1039,16 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 prevBtn.disabled = true;
                 nextBtn.disabled = true;
                 ocrBtn.disabled = true;
+                if (bulkOcrBtn) bulkOcrBtn.disabled = true;
+                if (exportDataBtn) exportDataBtn.disabled = true;
+                pageInfo.classList.add('hidden');
                 return;
             }
-            prevBtn.disabled = currentPage <= 1;
-            nextBtn.disabled = currentPage >= pdfDoc.numPages;
-            ocrBtn.disabled = false;
+            prevBtn.disabled = bulkOcrRunning || currentPage <= 1;
+            nextBtn.disabled = bulkOcrRunning || currentPage >= pdfDoc.numPages;
+            ocrBtn.disabled = bulkOcrRunning;
+            if (bulkOcrBtn) bulkOcrBtn.disabled = bulkOcrRunning;
+            if (exportDataBtn) exportDataBtn.disabled = bulkOcrRunning;
 
             currentPageDisplay.textContent = currentPage;
             totalPagesDisplay.textContent = pdfDoc.numPages;
@@ -1004,9 +1063,18 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 const page = await pdfDoc.getPage(pageNum);
                 
                 // 计算缩放比例以适应容器
-                const containerWidth = document.getElementById('book-canvas-wrapper').clientWidth - 40; 
+                let containerWidth = document.getElementById('book-canvas-wrapper').clientWidth - 40; 
+                // 如果容器隐藏或宽度为0，给一个默认回退宽度
+                if (containerWidth <= 0) {
+                    containerWidth = window.innerWidth > 768 ? 600 : window.innerWidth - 80;
+                }
                 const viewport = page.getViewport({ scale: 1 });
-                const scale = containerWidth / viewport.width;
+                let scale = containerWidth / viewport.width;
+                
+                // 限制最大缩放比例，防止过大或过小
+                if (scale < 0.5) scale = 0.5;
+                if (scale > 3) scale = 3;
+
                 const scaledViewport = page.getViewport({ scale: scale });
 
                 canvas.height = scaledViewport.height;
@@ -1029,19 +1097,23 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 updateNavigationButtons();
                 
                 // 清理旧的 OCR 状态
-                ocrData = [];
                 clickOverlay.style.width = `${scaledViewport.width}px`;
                 clickOverlay.style.height = `${scaledViewport.height}px`;
                 clickOverlay.classList.add('hidden');
                 clickOverlay.style.pointerEvents = 'none';
                 clickOverlay.querySelectorAll('.ocr-marker').forEach(m => m.remove()); // 清除标记
                 
-                stopPlaybackAndCleanup(); // 切换页面时停止所有播放和高亮
-                
-                // 渲染完成后自动运行 OCR
-                if (pdfDoc) {
-                    Promise.resolve().then(() => window.runOCR(true)); // 传入 true 表示自动运行
+                const cached = ocrCacheByPage.get(pageNum);
+                if (cached) {
+                    ocrData = cached;
+                    applyOcrOrder(ocrData);
+                    displayOCRText(ocrData);
+                } else {
+                    ocrData = [];
+                    ocrTextPanel.innerHTML = '<p class="text-gray-500 italic">PDF 已渲染完成。点击【识别/翻译】或【一键识别】开始识别与翻译。</p>';
                 }
+                
+                stopPlaybackAndCleanup(); // 切换页面时停止所有播放和高亮
 
             } catch (error) {
                 console.error("渲染 PDF 页面失败:", error);
@@ -1083,6 +1155,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 try {
                     const typedarray = new Uint8Array(this.result);
                     pdfDoc = await pdfjsLib.getDocument({ data: typedarray }).promise;
+                    ocrCacheByPage.clear();
                     currentPage = 1;
                     totalPagesDisplay.textContent = pdfDoc.numPages;
                     // renderPage 调用后将自动触发 runOCR
@@ -1107,6 +1180,13 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 currentAudio.pause();
                 currentAudio = null;
             }
+            if (currentSpeechUtterance) {
+                try {
+                    window.speechSynthesis?.cancel();
+                } catch (e) {}
+                currentSpeechUtterance = null;
+                currentSpeechStartPerfMs = null;
+            }
             if (currentSyncInterval) {
                 clearInterval(currentSyncInterval);
                 currentSyncInterval = null;
@@ -1116,25 +1196,212 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 currentSpeakingElement.remove();
                 currentSpeakingElement = null;
             }
-            // 清除单词高亮
             currentWordIndex = -1;
-            syncedWordDisplay.innerHTML = '';
-            wordSyncWrapper.classList.add('hidden');
-
-            // 保持翻译和原句不变，但更新状态信息
-            ttsStatusMessage.textContent = '已停止。';
         }
 
 
-        // --- TTS/翻译/时间戳生成函数 (保持不变) ---
+        async function openRouterChatCompletion({ messages, model }) {
+            const apiKey = getOpenRouterApiKey();
+            if (!apiKey) {
+                throw new Error('未配置 OpenRouter API Key。请先在顶部输入并保存。');
+            }
+            const payload = {
+                model: model || getOpenRouterModel(),
+                messages,
+                temperature: 0.2
+            };
+
+            for (let retry = 0; retry < MAX_RETRIES; retry++) {
+                try {
+                    const response = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${apiKey}`,
+                            'HTTP-Referer': window.location.origin,
+                            'X-Title': 'English_pdf_reader'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
+                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`OpenRouter API failed: ${response.status} - ${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    const text = result?.choices?.[0]?.message?.content;
+                    if (!text) {
+                        throw new Error('OpenRouter API 返回为空。');
+                    }
+                    return text;
+                } catch (error) {
+                    if (retry === MAX_RETRIES - 1) {
+                        throw error;
+                    }
+                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            throw new Error('OpenRouter API 最终调用失败 (未知原因)。');
+        }
+
+        function safeJsonParseArray(text) {
+            try {
+                const data = JSON.parse(text);
+                return Array.isArray(data) ? data : null;
+            } catch (e) {}
+            const start = text.indexOf('[');
+            const end = text.lastIndexOf(']');
+            if (start !== -1 && end !== -1 && end > start) {
+                const slice = text.slice(start, end + 1);
+                try {
+                    const data = JSON.parse(slice);
+                    return Array.isArray(data) ? data : null;
+                } catch (e) {}
+            }
+            return null;
+        }
+
+        function sanitizeOcrEnglishText(text) {
+            let t = String(text || '');
+            t = t.replace(/[\u4E00-\u9FFF]/g, ' ');
+            t = t.replace(/[0-9]/g, ' ');
+            t = t.replace(/\s+/g, ' ').trim();
+            t = t.replace(/^[^A-Za-z]+/, '').replace(/[^A-Za-z]+$/, '').trim();
+            if (t.length < 2) return '';
+            if (!/[A-Za-z]/.test(t)) return '';
+            return t;
+        }
+
+        async function callOpenRouterTranslation(text) {
+            const messages = [
+                { role: 'system', content: 'You are a professional translator.' },
+                { role: 'user', content: `把下面英文翻译成自然、简洁的中文，只输出翻译结果，不要加引号或解释：\n\n${text}` }
+            ];
+            const output = await openRouterChatCompletion({ messages, model: getOpenRouterModel() });
+            return output.trim();
+        }
+
+        async function callOpenRouterTiming(text) {
+            const messages = [
+                { role: 'system', content: "You are a text alignment specialist. Break the English text into individual words and estimate plausible start and end times in seconds for each word. Output only a JSON array of objects: {\"word\": string, \"start\": number, \"end\": number}." },
+                { role: 'user', content: `Text: ${text}` }
+            ];
+            const output = await openRouterChatCompletion({ messages, model: getOpenRouterModel() });
+            const data = safeJsonParseArray(output);
+            if (!data) {
+                throw new Error('时间戳生成返回的 JSON 解析失败。');
+            }
+            return data.filter(item =>
+                item && typeof item.word === 'string' &&
+                typeof item.start === 'number' &&
+                typeof item.end === 'number'
+            );
+        }
+
+        async function callOpenRouterOCR(base64Image) {
+            const dataUrl = `data:image/png;base64,${base64Image}`;
+            const messages = [
+                {
+                    role: 'system',
+                    content: 'You are a specialized OCR tool for English. Extract only English words and sentences from the image. Do NOT include digits, Chinese characters, or any non-English text. If a block includes a leading number (like "1."), exclude the number from the returned text. For each block output JSON object with fields: text (string) and bbox (array of 4 numbers [x_min, y_min, x_max, y_max] normalized strictly from 0 to 1000, representing the relative coordinates across the full image width and height, where [0,0] is top-left and [1000,1000] is bottom-right). Output only a JSON array.'
+                },
+                {
+                    role: 'user',
+                    content: [
+                        { type: 'text', text: 'Extract English text blocks and their normalized bounding boxes from this image.' },
+                        { type: 'image_url', image_url: { url: dataUrl } }
+                    ]
+                }
+            ];
+            const output = await openRouterChatCompletion({ messages, model: getOpenRouterModel() });
+            const data = safeJsonParseArray(output);
+            if (!data) {
+                throw new Error('OCR 返回的 JSON 解析失败。');
+            }
+            return data
+                .filter(item =>
+                    item && typeof item.text === 'string' && item.text.trim().length > 0 &&
+                    Array.isArray(item.bbox) && item.bbox.length === 4 &&
+                    item.bbox.every(n => typeof n === 'number')
+                )
+                .map(item => {
+                    const cleaned = sanitizeOcrEnglishText(item.text);
+                    if (!cleaned) return null;
+                    return { text: cleaned, bbox: item.bbox };
+                })
+                .filter(Boolean);
+        }
+
+        function speakWithBrowserTTS(text) {
+            if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) {
+                throw new Error('当前浏览器不支持本地 TTS。');
+            }
+            window.speechSynthesis.cancel();
+            currentSpeechStartPerfMs = null;
+            refreshVoices();
+
+            return new Promise((resolve, reject) => {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-GB';
+                const v = pickBritishVoice();
+                if (v) utterance.voice = v;
+                utterance.rate = 0.95;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+                currentSpeechUtterance = utterance;
+
+                utterance.onstart = () => {
+                    currentSpeechStartPerfMs = performance.now();
+                };
+                utterance.onend = () => {
+                    resolve();
+                };
+                utterance.onerror = () => {
+                    reject(new Error('本地 TTS 播放失败。'));
+                };
+                window.speechSynthesis.speak(utterance);
+            });
+        }
         
-        /**
-         * 调用 Gemini API 生成音频 Blob URL
-         */
-        async function generateTtsAudio(text) {
+        function pcmToMp3(pcm16, sampleRate = 24000) {
+            if (!window.lamejs) {
+                throw new Error("lamejs 尚未加载");
+            }
+            const lamejs = window.lamejs;
+            const mp3encoder = new lamejs.Mp3Encoder(1, sampleRate, 128);
+            const mp3Data = [];
             
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${apiKey}`;
+            const sampleBlockSize = 1152; 
+            for (let i = 0; i < pcm16.length; i += sampleBlockSize) {
+                const sampleChunk = pcm16.subarray(i, i + sampleBlockSize);
+                const mp3buf = mp3encoder.encodeBuffer(sampleChunk);
+                if (mp3buf.length > 0) {
+                    mp3Data.push(new Int8Array(mp3buf));
+                }
+            }
+            const mp3buf = mp3encoder.flush();
+            if (mp3buf.length > 0) {
+                mp3Data.push(new Int8Array(mp3buf));
+            }
+            
+            return new Blob(mp3Data, { type: 'audio/mp3' });
+        }
+
+        /**
+         * 调用 Gemini API 生成音频 Blob (MP3)
+         */
+        async function generateTtsAudioBlob(text) {
+            const TTS_MODEL = 'gemini-2.5-flash-preview-tts';
+            const TTS_VOICE = 'Aoede'; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent`;
 
             const payload = {
                 contents: [{ parts: [{ text: text }] }],
@@ -1175,11 +1442,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                         const pcmData = base64ToArrayBuffer(audioData);
                         const pcm16 = new Int16Array(pcmData);
                         
-                        const wavBlob = pcmToWav(pcm16, 24000); 
-                        const audioUrl = URL.createObjectURL(wavBlob);
-                        
-                        return audioUrl;
-
+                        return pcmToMp3(pcm16, 24000); 
                     } else {
                         throw new Error("TTS API returned invalid audio data structure.");
                     }
@@ -1198,239 +1461,39 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         /**
          * 调用 Gemini API 将文本翻译成中文
          */
-        async function callGeminiTranslation(text) {
-            
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${apiKey}`; 
-
-            const userQuery = `Translate the following English text into simple, natural Chinese, outputting only the translation text:\n\n"${text}"`;
-            
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-            };
-
-            for (let retry = 0; retry < MAX_RETRIES; retry++) {
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
-                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        continue;
-                    }
-
-                    if (!response.ok) {
-                        const errorText = await response.text();
-                        throw new Error(`Translation API failed: ${response.status} - ${errorText}`);
-                    }
-
-                    const result = await response.json();
-                    const translatedText = result.candidates?.[0]?.content?.parts?.[0]?.text;
-                    
-                    if (translatedText) {
-                        return translatedText.trim();
-                    } else {
-                        throw new Error("API returned an empty translation.");
-                    }
-
-                } catch (error) {
-                    if (retry === MAX_RETRIES - 1) {
-                        throw new Error("Translation API 最终调用失败: " + error.message);
-                    }
-                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                }
-            }
-            throw new Error("Translation API 最终调用失败 (未知原因).");
-        }
-
-
-        /**
-         * 调用 Gemini API 模拟生成单词时间戳 JSON
-         */
-        async function callGeminiTiming(text) {
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${apiKey}`;
-
-            const systemPrompt = `You are a text alignment specialist. Analyze the following English text. Break it down into individual words. Estimate a plausible start and end time in seconds for each word, assuming natural, continuous, and clear speech. The 'end' time of a word should be close to the 'start' time of the next word. Output only a JSON array.`;
-            
-            const userQuery = `Generate word timings for the following text: "${text}"`;
-
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-                generationConfig: {
-                    responseMimeType: "application/json",
-                    responseSchema: {
-                        type: "ARRAY",
-                        items: {
-                            type: "OBJECT",
-                            properties: {
-                                "word": { "type": "STRING", "description": "The individual word." },
-                                "start": { "type": "NUMBER", "description": "Start time in seconds (e.g., 0.0)." },
-                                "end": { "type": "NUMBER", "description": "End time in seconds (e.g., 0.5)." }
-                            },
-                            required: ["word", "start", "end"]
-                        }
-                    }
-                }
-            };
-
-            for (let retry = 0; retry < MAX_RETRIES; retry++) {
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
-                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        continue;
-                    }
-
-                    if (!response.ok) {
-                        const errorText = await response.text();
-                        throw new Error(`Timing API failed: ${response.status} - ${errorText}`);
-                    }
-
-                    const result = await response.json();
-                    const jsonString = result.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                    if (!jsonString) {
-                        throw new Error("API returned an invalid or empty JSON response structure for timing.");
-                    }
-                    
-                    const data = JSON.parse(jsonString);
-
-                    if (!Array.isArray(data)) {
-                         throw new Error("Timing API 返回的结构不是预期的数组格式。");
-                    }
-                    
-                    return data;
-
-                } catch (error) {
-                    if (retry === MAX_RETRIES - 1) {
-                        console.error("Gemini Timing call failed after all retries.", error);
-                        throw new Error("Timing API 最终调用失败: " + error.message);
-                    }
-                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                }
-            }
-            throw new Error("Timing API 最终调用失败 (未知原因).");
-        }
-
-
         // --- OCR 流程 ---
         
         function canvasToBase64(canvas) {
             const dataURL = canvas.toDataURL('image/png');
             return dataURL.split(',')[1];
         }
-        
-        async function callGeminiOCR(base64Image) {
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${apiKey}`;
 
-            const systemPrompt = `You are a specialized OCR tool for English. Your task is to detect and extract *every* individual English sentence or distinct title block from the image. For maximum accuracy, ensure the bounding box tightly encompasses only the text it describes, avoiding surrounding whitespace or graphics.
-            For each block, provide the text content and its normalized bounding box (bbox).
-            The bbox must be an array of four numbers: [x_min, y_min, x_max, y_max], where all values are relative to the image size and normalized to a 0-1000 scale. x_min=0 and y_min=0 is the top-left corner.
-            Do not include any other languages or unnecessary formatting.`;
-            
-            const userQuery = "Extract English text blocks and their normalized bounding boxes from this image.";
-
-            const payload = {
-                contents: [{
-                    role: "user",
-                    parts: [
-                        { text: userQuery },
-                        {
-                            inlineData: {
-                                mimeType: "image/png",
-                                data: base64Image
-                            }
-                        }
-                    ]
-                }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-                generationConfig: {
-                    responseMimeType: "application/json",
-                    responseSchema: {
-                        type: "ARRAY",
-                        items: {
-                            type: "OBJECT",
-                            properties: {
-                                "text": { "type": "STRING", "description": "The extracted English text block." },
-                                "bbox": { 
-                                    "type": "ARRAY", 
-                                    "description": "Normalized bounding box [x_min, y_min, x_max, y_max] from 0 to 1000.",
-                                    "items": { "type": "NUMBER" }
-                                }
-                            },
-                            required: ["text", "bbox"]
-                        }
-                    }
-                }
-            };
-
-            for (let retry = 0; retry < MAX_RETRIES; retry++) {
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.status === 429 && retry < MAX_RETRIES - 1) {
-                        const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        continue;
-                    }
-
-                    if (!response.ok) {
-                        const errorText = await response.text();
-                        throw new Error(`OCR API failed: ${response.status} - ${errorText}`);
-                    }
-
-                    const result = await response.json();
-                    const jsonString = result.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                    if (!jsonString) {
-                        throw new Error("API returned an invalid or empty JSON response structure.");
-                    }
-                    
-                    const data = JSON.parse(jsonString);
-
-                    if (!Array.isArray(data)) {
-                         throw new Error("OCR API 返回的结构不是预期的数组格式。");
-                    }
-                    
-                    return data.filter(item => 
-                        item.text && item.text.trim().length > 0 && 
-                        Array.isArray(item.bbox) && item.bbox.length === 4 &&
-                        item.bbox.every(n => typeof n === 'number')
-                    );
-
-                } catch (error) {
-                    if (retry === MAX_RETRIES - 1) {
-                        console.error("Gemini OCR call failed after all retries.", error);
-                        throw new Error("OCR API 最终调用失败: " + error.message);
-                    }
-                    const delay = Math.pow(2, retry) * 1000 + Math.random() * 1000;
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                }
+        function applyOcrOrder(list) {
+            if (!Array.isArray(list)) return;
+            for (let i = 0; i < list.length; i++) {
+                const item = list[i];
+                if (item && typeof item === 'object') item.order = i + 1;
             }
-            throw new Error("OCR API 最终调用失败 (未知原因).");
+        }
+
+        let cachedVoices = [];
+        function refreshVoices() {
+            try {
+                cachedVoices = window.speechSynthesis?.getVoices?.() || [];
+            } catch (e) {
+                cachedVoices = [];
+            }
+        }
+        refreshVoices();
+        if (window.speechSynthesis) {
+            window.speechSynthesis.onvoiceschanged = () => refreshVoices();
+        }
+        function pickBritishVoice() {
+            const voices = cachedVoices || [];
+            const gb = voices.filter(v => (v.lang || '').toLowerCase().startsWith('en-gb'));
+            if (gb.length === 0) return null;
+            const preferred = gb.find(v => /google|daniel|serena|arthur|kate/i.test(v.name || ''));
+            return preferred || gb[0];
         }
         
         /**
@@ -1444,17 +1507,37 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 ocrTextPanel.innerHTML = '<p class="text-gray-500 italic">当前页面未识别到可提取的文本块。</p>';
                 return;
             }
+            
+            applyOcrOrder(data);
+
+            ocrTextPanel.ondragover = (e) => {
+                e.preventDefault();
+                if (e.dataTransfer) e.dataTransfer.dropEffect = 'move';
+            };
+            ocrTextPanel.ondrop = (e) => {
+                e.preventDefault();
+                const fromStr = e.dataTransfer?.getData('text/plain') || '';
+                const from = draggedOcrIndex ?? Number(fromStr);
+                if (!Number.isFinite(from)) return;
+                if (from < 0 || from >= ocrData.length) return;
+                const [moved] = ocrData.splice(from, 1);
+                ocrData.push(moved);
+                draggedOcrIndex = null;
+                applyOcrOrder(ocrData);
+                displayOCRText(ocrData);
+            };
 
             // 使用 flex 布局来显示每个文本块，并添加样式以区分
             data.forEach((item, index) => {
                 const textBlock = document.createElement('div');
-                textBlock.classList.add('p-3', 'border', 'border-gray-200', 'rounded-lg', 'bg-white', 'shadow-sm', 'hover:bg-gray-50', 'transition', 'cursor-pointer', 'flex', 'items-start', 'space-x-3');
+                textBlock.classList.add('relative', 'p-3', 'border', 'border-gray-200', 'rounded-lg', 'bg-white', 'shadow-sm', 'hover:bg-gray-50', 'transition', 'cursor-pointer', 'flex', 'items-start', 'space-x-3', 'pr-10');
                 textBlock.setAttribute('data-index', index);
+                textBlock.draggable = true;
                 
                 // 序号标记 (与 Canvas 上的标记对应)
                 const indexSpan = document.createElement('span');
                 indexSpan.classList.add('flex-shrink-0', 'w-6', 'h-6', 'flex', 'items-center', 'justify-center', 'rounded-full', 'bg-purple-600', 'text-white', 'text-xs', 'font-bold');
-                indexSpan.textContent = index + 1; // 从 1 开始编号
+                indexSpan.textContent = item.order ?? index + 1;
                 
                 // 文本内容容器
                 const contentDiv = document.createElement('div');
@@ -1475,9 +1558,68 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
                 textBlock.appendChild(indexSpan);
                 textBlock.appendChild(contentDiv);
+
+                const playBtn = document.createElement('button');
+                playBtn.type = 'button';
+                playBtn.setAttribute('aria-label', '播放');
+                playBtn.classList.add('absolute', 'top-2', 'right-2', 'w-7', 'h-7', 'rounded-full', 'bg-gray-100', 'hover:bg-gray-200', 'text-gray-800', 'flex', 'items-center', 'justify-center', 'shadow-sm', 'transition');
+                playBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+                playBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    handleTextPanelClick(e, item.bbox, item.text);
+                };
+                playBtn.ondragstart = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                };
+                textBlock.appendChild(playBtn);
                 
                 // 添加点击事件，点击侧边栏的文本块也会触发播放
                 textBlock.onclick = (e) => handleTextPanelClick(e, item.bbox, item.text);
+                textBlock.ondragstart = (e) => {
+                    draggedOcrIndex = Number(textBlock.getAttribute('data-index'));
+                    if (e.dataTransfer) {
+                        e.dataTransfer.effectAllowed = 'move';
+                        e.dataTransfer.setData('text/plain', String(draggedOcrIndex));
+                    }
+                    textBlock.classList.add('opacity-60');
+                };
+                textBlock.ondragend = () => {
+                    draggedOcrIndex = null;
+                    textBlock.classList.remove('opacity-60');
+                    textBlock.classList.remove('ring-2', 'ring-blue-400');
+                };
+                textBlock.ondragover = (e) => {
+                    e.preventDefault();
+                    if (e.dataTransfer) e.dataTransfer.dropEffect = 'move';
+                    textBlock.classList.add('ring-2', 'ring-blue-400');
+                };
+                textBlock.ondragleave = () => {
+                    textBlock.classList.remove('ring-2', 'ring-blue-400');
+                };
+                textBlock.ondrop = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    textBlock.classList.remove('ring-2', 'ring-blue-400');
+                    const fromStr = e.dataTransfer?.getData('text/plain') || '';
+                    const from = draggedOcrIndex ?? Number(fromStr);
+                    const targetIndex = Number(textBlock.getAttribute('data-index'));
+                    if (!Number.isFinite(from) || !Number.isFinite(targetIndex)) return;
+                    if (from < 0 || from >= ocrData.length) return;
+                    if (targetIndex < 0 || targetIndex >= ocrData.length) return;
+
+                    const rect = textBlock.getBoundingClientRect();
+                    const after = e.clientY > rect.top + rect.height / 2;
+                    let insertIndex = targetIndex + (after ? 1 : 0);
+
+                    const [moved] = ocrData.splice(from, 1);
+                    if (from < insertIndex) insertIndex -= 1;
+                    insertIndex = Math.max(0, Math.min(insertIndex, ocrData.length));
+                    ocrData.splice(insertIndex, 0, moved);
+                    draggedOcrIndex = null;
+                    applyOcrOrder(ocrData);
+                    displayOCRText(ocrData);
+                };
 
                 ocrTextPanel.appendChild(textBlock);
             });
@@ -1488,41 +1630,296 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
          * @param {Array} data - OCR 结果数组
          */
         function renderOcrMarkers(data) {
-            // 清除 Canvas 上已有的标记
             clickOverlay.querySelectorAll('.ocr-marker').forEach(marker => marker.remove());
+        }
 
-            if (data.length === 0) return;
+        async function buildOcrDataFromCanvas(inputCanvas, progressText) {
+            const base64Image = canvasToBase64(inputCanvas);
+            const results = await callOpenRouterOCR(base64Image);
+            if (results.length === 0) return [];
 
-            const rectOverlay = clickOverlay.getBoundingClientRect(); 
-            const width = rectOverlay.width;
-            const height = rectOverlay.height;
-            const markerSize = 24; // 标记大小 24px
+            if (progressText) {
+                ocrTextPanel.innerHTML = `<p class="text-gray-500 italic">${progressText}</p>`;
+            }
 
-            data.forEach((item, index) => {
-                const [x_min, y_min] = item.bbox;
+            const translationPromises = results.map(item => callOpenRouterTranslation(item.text).catch(err => {
+                console.error("Translation failed for text:", item.text, err);
+                return '自动翻译失败。';
+            }));
+            const translations = await Promise.all(translationPromises);
 
-                // 计算位置 (左上角)
-                const pixelX = (x_min / BBOX_NORM_SIZE) * width;
-                const pixelY = (y_min / BBOX_NORM_SIZE) * height;
+            let data = results.map((item, index) => ({
+                ...item,
+                translation: translations[index]
+            }));
 
-                const marker = document.createElement('div');
-                marker.classList.add('ocr-marker', 'absolute', 'flex', 'items-center', 'justify-center', 'rounded-full', 'bg-purple-600', 'text-white', 'text-xs', 'font-bold', 'shadow-lg', 'z-30', 'transition', 'duration-200', 'hover:scale-110');
-                marker.textContent = index + 1; // 从 1 开始编号
+            data = data
+                .map(item => {
+                    const [x1, y1, x2, y2] = item.bbox || [0, 0, 0, 0];
+                    const x_min = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.min(x1, x2)));
+                    const y_min = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.min(y1, y2)));
+                    const x_max = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.max(x1, x2)));
+                    const y_max = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.max(y1, y2)));
+                    return { ...item, bbox: [x_min, y_min, x_max, y_max] };
+                })
+                .sort((a, b) => {
+                    const ay = a.bbox[1];
+                    const by = b.bbox[1];
+                    const dy = ay - by;
+                    if (Math.abs(dy) > 12) return dy;
+                    return a.bbox[0] - b.bbox[0];
+                });
+            applyOcrOrder(data);
+            return data;
+        }
 
-                // 应用样式和定位
-                marker.style.width = `${markerSize}px`;
-                marker.style.height = `${markerSize}px`;
-                
-                // 调整位置，使其位于文本块的左上角外部
-                marker.style.left = `${pixelX - markerSize / 2 - 5}px`; 
-                marker.style.top = `${pixelY - markerSize / 2 - 5}px`;
-                
-                // 防止标记本身捕获点击事件
-                marker.style.pointerEvents = 'none';
+        async function buildPageOcrData(pageNum) {
+            const page = await pdfDoc.getPage(pageNum);
+            const baseViewport = page.getViewport({ scale: 1 });
+            let scale = 1200 / baseViewport.width;
+            if (scale < 1) scale = 1;
+            if (scale > 2.5) scale = 2.5;
+            const viewport = page.getViewport({ scale });
+            const offscreen = document.createElement('canvas');
+            offscreen.width = viewport.width;
+            offscreen.height = viewport.height;
+            const offCtx = offscreen.getContext('2d');
+            await page.render({ canvasContext: offCtx, viewport }).promise;
+            return buildOcrDataFromCanvas(offscreen);
+        }
 
-                clickOverlay.appendChild(marker);
+        window.runBulkOCR = async function() {
+            if (!pdfDoc) {
+                showError("请先加载 PDF 文件。");
+                return;
+            }
+            if (bulkOcrRunning) return;
+
+            bulkOcrRunning = true;
+            updateNavigationButtons();
+
+            const originalHtml = bulkOcrBtn ? bulkOcrBtn.innerHTML : '';
+            if (bulkOcrBtn) {
+                bulkOcrBtn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>一键识别中...`;
+            }
+
+            try {
+                const total = pdfDoc.numPages;
+                for (let p = 1; p <= total; p++) {
+                    if (!bulkOcrRunning) break;
+                    if (ocrCacheByPage.has(p)) continue;
+                    ocrTextPanel.innerHTML = `<p class="text-gray-500 italic">一键识别中：${p} / ${total}</p>`;
+                    const data = await buildPageOcrData(p);
+                    ocrCacheByPage.set(p, data);
+                }
+
+                const cached = ocrCacheByPage.get(currentPage);
+                if (cached) {
+                    ocrData = cached;
+                    displayOCRText(ocrData);
+                } else {
+                    ocrTextPanel.innerHTML = '<p class="text-gray-500 italic">一键识别完成。当前页未识别到可提取的文本块。</p>';
+                }
+            } catch (error) {
+                console.error("一键识别失败:", error);
+                showError("一键识别失败: " + error.message);
+            } finally {
+                bulkOcrRunning = false;
+                if (bulkOcrBtn) bulkOcrBtn.innerHTML = originalHtml || '一键识别';
+                updateNavigationButtons();
+            }
+        };
+
+        function buildExportRows() {
+            const pages = Array.from(ocrCacheByPage.keys()).sort((a, b) => a - b);
+            const rows = [];
+            let audioIndex = 1;
+            for (const pageNum of pages) {
+                const items = ocrCacheByPage.get(pageNum) || [];
+                applyOcrOrder(items);
+                for (const item of items) {
+                    rows.push({
+                        page: pageNum,
+                        inPage: item.order || 0,
+                        audio: audioIndex++,
+                        text: item.text || '',
+                        translation: item.translation || ''
+                    });
+                }
+            }
+            return rows;
+        }
+
+        function showActionError(message) {
+            try {
+                errorMessage.textContent = message;
+                errorBox.classList.remove('hidden');
+            } catch (e) {
+                alert(message);
+            }
+        }
+
+        function loadScriptOnce(url) {
+            return new Promise((resolve, reject) => {
+                const existing = document.querySelector(`script[data-src="${url}"]`);
+                if (existing) {
+                    existing.addEventListener('load', resolve, { once: true });
+                    existing.addEventListener('error', reject, { once: true });
+                    if (window.XLSX) resolve();
+                    return;
+                }
+                const s = document.createElement('script');
+                s.src = url;
+                s.async = true;
+                s.setAttribute('data-src', url);
+                s.onload = () => resolve();
+                s.onerror = () => reject(new Error(`脚本加载失败: ${url}`));
+                document.head.appendChild(s);
             });
         }
+
+        async function ensureXlsxLoaded() {
+            if (window.XLSX) return window.XLSX;
+            const urls = [
+                'https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js',
+                'https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'
+            ];
+            let lastError = null;
+            for (const url of urls) {
+                try {
+                    await loadScriptOnce(url);
+                    if (window.XLSX) return window.XLSX;
+                } catch (e) {
+                    lastError = e;
+                }
+            }
+            throw lastError || new Error('XLSX 依赖未加载');
+        }
+
+        window.exportDataXlsx = async function() {
+            if (!pdfDoc) {
+                showActionError("请先加载 PDF 文件。");
+                return;
+            }
+            let XLSX;
+            try {
+                XLSX = await ensureXlsxLoaded();
+                if (!window.JSZip) {
+                    await loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
+                }
+                if (!window.lamejs) {
+                    await loadScriptOnce('https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js');
+                }
+            } catch (e) {
+                console.error(e);
+                showActionError("导出失败：依赖项未加载（可能被网络拦截）。请刷新页面后重试。");
+                return;
+            }
+
+            const rows = buildExportRows();
+            if (rows.length === 0) {
+                showActionError("没有可导出的识别数据：请先点击【识别/翻译】或【一键识别】。");
+                return;
+            }
+
+            const originalHtml = exportDataBtn.innerHTML;
+            exportDataBtn.disabled = true;
+
+            try {
+                const zip = new JSZip();
+                const audioFolder = zip.folder("audio");
+
+                const aoa = [
+                    ['页码', '同页内顺序', '音频序号', '内容', '中文翻译', '英文音频']
+                ];
+
+                let completedAudioCount = 0;
+                exportDataBtn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>获取音频 (0/${rows.length})...`;
+
+                // 准备并发任务
+                const tasks = rows.map((r) => async () => {
+                    const audioFilename = `audio_${r.audio}.mp3`;
+                    let mp3Blob = null;
+                    try {
+                        mp3Blob = await generateTtsAudioBlob(r.text);
+                    } catch (err) {
+                        console.error(`获取音频失败 [${r.text}]:`, err);
+                    }
+                    
+                    completedAudioCount++;
+                    exportDataBtn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>获取音频 (${completedAudioCount}/${rows.length})...`;
+                    
+                    return { row: r, audioFilename, mp3Blob };
+                });
+
+                // 控制并发数为 5，避免触发 API 速率限制
+                const CONCURRENCY_LIMIT = 5;
+                const results = [];
+                const executing = [];
+                for (const task of tasks) {
+                    const p = task().then(res => {
+                        executing.splice(executing.indexOf(p), 1);
+                        return res;
+                    });
+                    executing.push(p);
+                    results.push(p);
+                    if (executing.length >= CONCURRENCY_LIMIT) {
+                        await Promise.race(executing);
+                    }
+                }
+                
+                const audioResults = await Promise.all(results);
+
+                // 将结果写入 Excel 和 Zip
+                for (const res of audioResults) {
+                    aoa.push([res.row.page, res.row.inPage, res.row.audio, res.row.text, res.row.translation, res.audioFilename]);
+                    if (res.mp3Blob) {
+                        audioFolder.file(res.audioFilename, res.mp3Blob);
+                    }
+                }
+
+                exportDataBtn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>打包数据中...`;
+
+                const ws = XLSX.utils.aoa_to_sheet(aoa);
+                ws['!cols'] = [
+                    { wch: 6 },
+                    { wch: 10 },
+                    { wch: 8 },
+                    { wch: 60 },
+                    { wch: 60 },
+                    { wch: 20 }
+                ];
+
+                const wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, '英语课本数据');
+
+                const date = new Date();
+                const stamp = `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}${String(date.getHours()).padStart(2, '0')}${String(date.getMinutes()).padStart(2, '0')}${String(date.getSeconds()).padStart(2, '0')}`;
+                const excelFilename = `英语课本数据_${stamp}.xlsx`;
+                
+                const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+                zip.file(excelFilename, excelBuffer);
+
+                const zipBlob = await zip.generateAsync({ type: "blob" });
+                
+                const downloadUrl = URL.createObjectURL(zipBlob);
+                const a = document.createElement("a");
+                a.href = downloadUrl;
+                a.download = `英语课本数据_${stamp}.zip`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(downloadUrl);
+
+            } catch (err) {
+                console.error(err);
+                showActionError("生成数据失败：" + err.message);
+            } finally {
+                exportDataBtn.innerHTML = originalHtml;
+                exportDataBtn.disabled = false;
+            }
+        };
 
 
         window.runOCR = async function(isAuto = false) {
@@ -1546,7 +1943,6 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             `;
 
             errorBox.classList.add('hidden');
-            ttsStatusBox.classList.add('hidden');
             ocrData = [];
             clickOverlay.classList.add('hidden');
             clickOverlay.style.pointerEvents = 'none';
@@ -1560,7 +1956,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    <span>正在执行 Gemini Vision OCR... (步骤 1/2)</span>
+                    <span>正在执行 OpenRouter OCR... (步骤 1/2)</span>
                 </div>
             `;
 
@@ -1568,7 +1964,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             try {
                 // 1. OCR 识别文本块
                 const base64Image = canvasToBase64(canvas);
-                const results = await callGeminiOCR(base64Image);
+                const results = await callOpenRouterOCR(base64Image);
                 
                 if (results.length === 0) {
                     ocrData = [];
@@ -1585,7 +1981,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                         </div>
                     `;
                     
-                    const translationPromises = results.map(item => callGeminiTranslation(item.text).catch(err => {
+                    const translationPromises = results.map(item => callOpenRouterTranslation(item.text).catch(err => {
                         console.error("Translation failed for text:", item.text, err);
                         return '自动翻译失败。'; // Fallback text
                     }));
@@ -1601,25 +1997,35 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
 
                 // 4. 显示和渲染标记
+                ocrData = ocrData
+                    .map(item => {
+                        const [x1, y1, x2, y2] = item.bbox || [0, 0, 0, 0];
+                        const x_min = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.min(x1, x2)));
+                        const y_min = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.min(y1, y2)));
+                        const x_max = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.max(x1, x2)));
+                        const y_max = Math.max(0, Math.min(BBOX_NORM_SIZE, Math.max(y1, y2)));
+                        return { ...item, bbox: [x_min, y_min, x_max, y_max] };
+                    })
+                    .sort((a, b) => {
+                        const ay = a.bbox[1];
+                        const by = b.bbox[1];
+                        const dy = ay - by;
+                        if (Math.abs(dy) > 12) return dy;
+                        return a.bbox[0] - b.bbox[0];
+                    });
+                applyOcrOrder(ocrData);
                 displayOCRText(ocrData);
-                renderOcrMarkers(ocrData);
-
-                if (ocrData.length === 0) {
-                    ttsStatusMessage.textContent = 'OCR/翻译完成，但未识别到可点击的英文文本块。';
-                    ttsStatusBox.classList.remove('hidden');
-                } else {
-                    ttsStatusMessage.textContent = `OCR/翻译完成，识别到 ${ocrData.length} 个文本块。现在您可以直接点击图片上的文本区域或右侧文本块来播放音频。`;
-                    ttsStatusBox.classList.remove('hidden');
-                    clickOverlay.classList.remove('hidden');
-                    clickOverlay.style.pointerEvents = 'auto'; 
+                ocrCacheByPage.set(currentPage, ocrData);
+                
+                if (ocrData.length > 0) {
+                    clickOverlay.classList.add('hidden');
+                    clickOverlay.style.pointerEvents = 'none'; 
+                    await new Promise(requestAnimationFrame);
                 }
 
             } catch (error) {
                 console.error("OCR 或翻译提取失败:", error);
-                ttsStatusMessage.textContent = `OCR 或翻译提取失败: ${error.message}`;
-                ttsStatusBox.classList.remove('bg-blue-100', 'border-blue-400');
-                ttsStatusBox.classList.add('bg-red-100', 'border-red-400');
-                ttsStatusBox.classList.remove('hidden');
+                ocrCacheByPage.delete(currentPage);
                 
                 // 文本面板显示错误信息
                 ocrTextPanel.innerHTML = `<p class="text-red-500 font-semibold">OCR 或翻译失败: ${error.message}</p>`;
@@ -1632,239 +2038,29 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         };
 
 
-        // --- 同步高亮逻辑 (保持不变) ---
-
-        /**
-         * 渲染单词到同步显示区
-         */
-        function renderSyncedWords(timings) {
-            syncedWordDisplay.innerHTML = '';
-            wordSyncWrapper.classList.remove('hidden');
-
-            timings.forEach((item, index) => {
-                const wordSpan = document.createElement('span');
-                wordSpan.id = `synced-word-${index}`;
-                wordSpan.textContent = item.word;
-                wordSpan.classList.add('word', 'inline-block', 'mx-0.5', 'py-1', 'px-1', 'rounded-lg');
-                
-                // 添加到容器
-                syncedWordDisplay.appendChild(wordSpan);
-
-                // 添加空格分隔符
-                const spaceSpan = document.createElement('span');
-                spaceSpan.textContent = ' ';
-                spaceSpan.classList.add('inline-block', 'whitespace-pre');
-                syncedWordDisplay.appendChild(spaceSpan);
-            });
-        }
-
-        /**
-         * 启动同步高亮计时器
-         */
-        function startWordSynchronization(audio, timings) {
-            if (currentSyncInterval) {
-                clearInterval(currentSyncInterval);
-            }
-            
-            // 使用 interval 来模拟 audioPlayer.timeupdate 事件
-            currentSyncInterval = setInterval(() => {
-                const currentTime = audio.currentTime;
-                
-                let newWordIndex = -1;
-                
-                for (let i = 0; i < timings.length; i++) {
-                    const timing = timings[i];
-                    // 使用 < 和 >= 确保时间点的包含性
-                    if (currentTime >= timing.start && currentTime < timing.end) {
-                        newWordIndex = i;
-                        break; 
-                    }
-                }
-
-                if (newWordIndex !== currentWordIndex) {
-                    // 1. 移除上一个单词的高亮
-                    if (currentWordIndex !== -1) {
-                        const prevSpan = document.getElementById(`synced-word-${currentWordIndex}`);
-                        if (prevSpan) {
-                            prevSpan.classList.remove('highlighted-word');
-                        }
-                    }
-
-                    // 2. 应用新单词的高亮
-                    if (newWordIndex !== -1) {
-                        const newSpan = document.getElementById(`synced-word-${newWordIndex}`);
-                        if (newSpan) {
-                            newSpan.classList.add('highlighted-word');
-                        }
-                    }
-
-                    // 3. 更新当前索引
-                    currentWordIndex = newWordIndex;
-                }
-            }, 100); 
-
-            // 音频播放结束时停止同步
-            audio.onended = () => {
-                stopPlaybackAndCleanup();
-                ttsStatusMessage.textContent = '播放完成。';
-                // 移除所有单词高亮
-                syncedWordDisplay.querySelectorAll('.highlighted-word').forEach(span => {
-                    span.classList.remove('highlighted-word');
-                });
-            };
-            audio.onerror = (e) => {
-                console.error("Audio playback error:", e);
-                ttsStatusMessage.textContent = '音频播放错误。';
-                if (currentSpeakingElement) currentSpeakingElement.style.border = '2px solid red'; 
-                stopPlaybackAndCleanup();
-            };
-        }
-        
         /**
          * 集中处理 TTS、翻译和播放逻辑
          * @param {Array} matchedBbox - 匹配到的文本块的边界框 [x_min, y_min, x_max, y_max]
          * @param {string} matchedText - 匹配到的文本内容
          */
         async function processPlayback(matchedBbox, matchedText) {
-            
-            // UI 准备阶段
-            ttsStatusBox.classList.remove('hidden', 'bg-red-100', 'border-red-400');
-            ttsStatusBox.classList.add('bg-blue-100', 'border-blue-400');
-            originalTextDisplay.textContent = matchedText; 
-            translatedTextElement.textContent = '正在翻译...';
-            translatedTextElement.classList.remove('text-red-600');
-            ttsStatusMessage.innerHTML = `
-                <svg class="animate-spin h-4 w-4 mr-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                正在执行 TTS、翻译和时间戳生成 (请稍候)...
-            `;
-            wordSyncWrapper.classList.add('hidden'); 
-
-            // 创建 Canvas 上的高亮框
-            const [x_min, y_min, x_max, y_max] = matchedBbox;
-            const highlightDiv = document.createElement('div');
-            
-            // 重新获取尺寸，确保准确
-            const rectOverlay = clickOverlay.getBoundingClientRect(); 
-            const pixelX = (x_min / BBOX_NORM_SIZE) * rectOverlay.width;
-            const pixelY = (y_min / BBOX_NORM_SIZE) * rectOverlay.height;
-            const pixelWidth = ((x_max - x_min) / BBOX_NORM_SIZE) * rectOverlay.width;
-            const pixelHeight = ((y_max - y_min) / BBOX_NORM_SIZE) * rectOverlay.height;
-
-            // BUG FIX: 调整高亮样式
-            highlightDiv.style.cssText = `
-                position: absolute;
-                left: ${pixelX}px;
-                top: ${pixelY}px;
-                width: ${pixelWidth}px;
-                height: ${pixelHeight}px;
-                border: 2px solid rgba(103, 58, 183, 1); 
-                background-color: rgba(103, 58, 183, 0.15); 
-                border-radius: 4px; /* 增加圆角 */
-                pointer-events: none;
-                transition: all 0.1s ease-out;
-                z-index: 20;
-            `;
-            
-            clickOverlay.appendChild(highlightDiv);
-            currentSpeakingElement = highlightDiv;
-            
-            // 4. 并发调用所有服务
             try {
-                // BUG FIX: 避免重复翻译。现在点击时，先尝试从 ocrData 中查找已有的翻译结果。
-                let translation;
-                const existingData = ocrData.find(item => item.text === matchedText && item.bbox.join(',') === matchedBbox.join(','));
-                
-                if (existingData && existingData.translation && existingData.translation !== '自动翻译失败。') {
-                    translation = existingData.translation;
-                } else {
-                    // 如果找不到，或者翻译失败，则重新翻译
-                    translation = await callGeminiTranslation(matchedText);
-                }
-
-
-                const [audioUrl, timingData] = await Promise.all([
-                    generateTtsAudio(matchedText),
-                    callGeminiTiming(matchedText)
-                ]);
-
-                // 5. 更新翻译
-                translatedTextElement.textContent = translation;
-
-                // 6. 播放和同步
-                currentAudio = new Audio(audioUrl);
-                currentAudio.volume = 0.8; 
-                
-                // 渲染单词，并启动同步
-                renderSyncedWords(timingData);
-                startWordSynchronization(currentAudio, timingData);
-
-                await currentAudio.play();
-                ttsStatusMessage.textContent = `正在播放音频: "${matchedText.substring(0, 50)}..."`;
+                speakWithBrowserTTS(matchedText)
+                    .then(() => {
+                        stopPlaybackAndCleanup();
+                    })
+                    .catch((e) => {
+                        console.error("TTS playback failed:", e);
+                        stopPlaybackAndCleanup();
+                    });
 
             } catch (error) {
                 console.error("处理点击请求失败:", error);
-                
-                ttsStatusMessage.textContent = `处理失败: ${error.message}`;
-                ttsStatusBox.classList.remove('bg-blue-100', 'border-blue-400');
-                ttsStatusBox.classList.add('bg-red-100', 'border-red-400');
-                
-                translatedTextElement.textContent = '翻译失败或未完成。';
-                translatedTextElement.classList.add('text-red-600');
-                
-                if (currentSpeakingElement) currentSpeakingElement.style.border = '2px solid red';
                 stopPlaybackAndCleanup();
             }
         }
 
 
-        // --- 碰撞检测与点击处理 ---
-
-        window.handleCanvasClick = async function(event) {
-            if (ocrData.length === 0) {
-                ttsStatusMessage.textContent = '文本识别未完成或未识别到文本块。';
-                ttsStatusBox.classList.remove('hidden');
-                return;
-            }
-
-            stopPlaybackAndCleanup(); // 开始新任务时，清理旧任务
-
-            // 1. 获取点击位置并归一化
-            const rect = clickOverlay.getBoundingClientRect();
-            const clickX = event.clientX - rect.left;
-            const clickY = event.clientY - rect.top;
-
-            const normX = (clickX / rect.width) * BBOX_NORM_SIZE;
-            const normY = (clickY / rect.height) * BBOX_NORM_SIZE;
-
-            let matchedText = null;
-            let matchedBbox = null;
-
-            // 2. 碰撞检测
-            for (const item of ocrData) {
-                const [x_min, y_min, x_max, y_max] = item.bbox;
-                
-                if (normX >= x_min && normX <= x_max && normY >= y_min && normY <= y_max) {
-                    matchedText = item.text;
-                    matchedBbox = item.bbox;
-                    break;
-                }
-            }
-            
-            // 3. 处理匹配结果
-            if (!matchedText) {
-                ttsStatusMessage.textContent = '未点击到识别的英文文本块。请再试一次。';
-                ttsStatusBox.classList.remove('hidden');
-                originalTextDisplay.textContent = '';
-                translatedTextElement.textContent = '';
-                return;
-            }
-
-            await processPlayback(matchedBbox, matchedText);
-        };
-        
         /**
          * 处理侧边栏文本块的点击事件
          */
